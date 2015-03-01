@@ -34,13 +34,55 @@ SELECT CASE
               THEN 'W'
           WHEN home_score = away_score
               THEN 'D'
-          ELSE 'W'
+          ELSE 'L'
       END as result, "away" as side, round_id
 FROM MATCH, TEAM
 WHERE (TEAM.team_id = MATCH.away_id)
       AND TEAM.name LIKE ?
 ORDER BY round_id DESC
 LIMIT 10
+
+
+
+Select count(*) as sub_total, total
+from MATCH, TEAM as TEAM1, (Select * from TEAM where force=2) as TEAM2
+left join (Select count(*) as total
+           from MATCH, TEAM as TEAM1, (Select * from TEAM where force=2) as TEAM2
+           where (MATCH.season_id = ?)
+           and TEAM1.name like ?
+           and ((TEAM1.team_id = MATCH.home_id and TEAM2.team_id = MATCH.away_id)
+                  or
+                 (TEAM1.team_id = MATCH.away_id and TEAM2.team_id = MATCH.home_id))
+           )
+where (MATCH.season_id = ?)
+      and TEAM.name like ?
+      and ((TEAM1.team_id = MATCH.home_id and TEAM2.team_id = MATCH.away_id)
+            or
+            (TEAM1.team_id = MATCH.away_id and TEAM2.team_id = MATCH.home_id))
+      and MATCH.home_score + MATCH.away_score > 2.5
+
+
+
+// Score after minute, vs team in the category
+SELECT count(*) AS sub_total, total
+from (Select MATCH.match_id
+      from MATCH, TEAM as TEAM1, (Select * from TEAM where force=1) as TEAM2, GOAL
+      where MATCH.match_id = GOAL.match_id
+            and MATCH.season_id = "1415"
+            and TEAM1.name like "%Liverpool%"
+            and GOAL.minute >= 75
+            and ((TEAM1.team_id = MATCH.home_id and TEAM2.team_id = MATCH.away_id)
+                  or
+                 (TEAM1.team_id = MATCH.away_id and TEAM2.team_id = MATCH.home_id))
+      group by MATCH.match_id)
+left join (Select count(*) as total
+           from MATCH, TEAM as TEAM1, (Select * from TEAM where force=1) as TEAM2
+           where (MATCH.season_id = "1415")
+                  and TEAM1.name like "%Liverpool%"
+                  and ((TEAM1.team_id = MATCH.home_id and TEAM2.team_id = MATCH.away_id)
+                      or (TEAM1.team_id = MATCH.away_id and TEAM2.team_id = MATCH.home_id))
+                  )
+
 
 
 // hiep 2 nhieu ban hon hiep 1

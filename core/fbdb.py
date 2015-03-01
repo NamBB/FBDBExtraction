@@ -154,6 +154,7 @@ class TransferMarktDriver(object):
             print e.message
             return None
 
+
     #----------------------------------------------------------
     # parse page like this http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=21&spieltagBis=21
     #----------------------------------------------------------
@@ -188,6 +189,29 @@ class TransferMarktDriver(object):
             print "Exception " + e.message
 
 
+    def updateTeamForce(self, web):
+        try:
+            #get page content
+            page = requests.get(web)
+            root = html.document_fromstring(page.text)
+
+            league_table = root.xpath("//div[@class='responsive-table']")[0].xpath(".//table/tbody/tr")
+            pos = 0
+            for table_line in league_table:
+                pos += 1
+                team = table_line.xpath(".//td/a")[0].get("title")
+                print team
+                if pos < 7:
+                    force_value = 1
+                else:
+                    if pos < 14: force_value = 2
+                    else: force_value = 3
+
+                dbtool.updateTeamForce(self._db, team, force_value)
+
+        except Exception as e:
+            print "updateTeamForce", e
+
 
 
 
@@ -195,14 +219,14 @@ def ParsePremier():
     fbdb_config = fbdbconfig.FBDBConfig('fbdb.conf')
     x = TransferMarktDriver(fbdb_config, '1415')
     web = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1/saison_id/2014'
-    premier = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=24&spieltagBis=24'
+    premier = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=26&spieltagBis=26'
     x.parseSeasonFixture(premier)
 
 
 def ParseItaly():
     fbdb_config = fbdbconfig.FBDBConfig('fbdb.conf')
     x = TransferMarktDriver(fbdb_config, '1415')
-    italy = 'http://www.transfermarkt.co.uk/serie-a/gesamtspielplan/wettbewerb/IT1?saison_id=2014&spieltagVon=22&spieltagBis=22'
+    italy = 'http://www.transfermarkt.co.uk/serie-a/gesamtspielplan/wettbewerb/IT1?saison_id=2014&spieltagVon=24&spieltagBis=24'
     x.parseSeasonFixture(italy)
 
 
@@ -214,17 +238,23 @@ def ParseMatch():
 def ParseNextFixture():
     fbdb_config = fbdbconfig.FBDBConfig('fbdb.conf')
     x = TransferMarktDriver(fbdb_config, '1415')
-    web = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=25&spieltagBis=25'
-    italy = 'http://www.transfermarkt.co.uk/serie-a/gesamtspielplan/wettbewerb/IT1?saison_id=2014&spieltagVon=22&spieltagBis=22'
+    web = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=27&spieltagBis=27'
+    italy = 'http://www.transfermarkt.co.uk/serie-a/gesamtspielplan/wettbewerb/IT1?saison_id=2014&spieltagVon=25&spieltagBis=25'
     #web = 'http://www.transfermarkt.co.uk/spielbericht/index/spielbericht/2486685'
     x.parseNextFixture(web)
-    #x.parseNextFixture(italy)
+    x.parseNextFixture(italy)
+
 
 
 def QueryNextFixture():
     x = queryfbdb.QueryFBDB(fbdbconfig.FBDBConfig('fbdb.conf'))
-    print x.queryUpNextMatches()
+    print x.queryUpNextMatchesTest()
 
+
+def UpdateTeamForce():
+    x = TransferMarktDriver(fbdbconfig.FBDBConfig('fbdb.conf'), '1415')
+    web = "http://www.transfermarkt.co.uk/premier-league/tabelle/wettbewerb/GB1/saison_id/2014"
+    x.updateTeamForce(web)
 
 
 def ExecuteQuery():
@@ -235,11 +265,17 @@ def ExecuteQuery():
 def Test ():
     fbdb_config = fbdbconfig.FBDBConfig('fbdb.conf')
     x = TransferMarktDriver(fbdb_config, '1415')
-    web = 'http://www.transfermarkt.co.uk/spielbericht/index/spielbericht/2486613'
-    x.parseMatchDetail(web)
+    web = 'http://www.transfermarkt.co.uk/spielbericht/index/spielbericht/2486732'
+    x.parseNextMatchDetail(web)
+    web = 'http://www.transfermarkt.co.uk/spielbericht/index/spielbericht/2486729'
+    x.parseNextMatchDetail(web)
+
+
 
 if __name__ == '__main__':
+    #Test()
     #ParseNextFixture()
     #ParsePremier()
     #ParseItaly()
     QueryNextFixture()
+    #UpdateTeamForce()

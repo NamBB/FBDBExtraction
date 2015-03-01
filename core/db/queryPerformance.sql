@@ -11,8 +11,8 @@ FROM (SELECT CASE
             AND TEAM.name LIKE ?
       UNION
       SELECT CASE
-                WHEN home_score < away_score
-                    THEN 'W'
+                WHEN home_score > away_score
+                    THEN 'L'
                 WHEN home_score = away_score
                     THEN 'D'
                 ELSE 'W'

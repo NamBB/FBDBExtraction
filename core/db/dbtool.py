@@ -65,6 +65,17 @@ def archiveTeam (db, team_name):
         else:
             return team[0]
 
+def updateTeamForce (db, team_name, force_value):
+    with cursor(db) as cur:
+        cur.execute('update TEAM set force=? where name = ?', (force_value, team_name,))
+        db.commit()
+
+def getTeamForce (db, team_name):
+    with cursor(db) as cur:
+        cur.execute('select force from TEAM where name = ?', (team_name,))
+        force = cur.fetchone()
+        return force[0]
+
 
 def archiveLeague (db, league_name):
     with cursor(db) as cur:

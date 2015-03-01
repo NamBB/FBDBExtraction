@@ -27,6 +27,17 @@ class QueryFBDB (object):
         query_sentence = file.read()
         return dbtool.executeQuery(self._db, query_sentence,[season, "%"+team+"%", season, "%"+team+"%"])
 
+    def runQuerySeasonTeamCategory (self, season, team, force):
+        query_file_path = os.getcwd() + '/db/' + inspect.stack()[1][3] + '.sql'
+        file = open(query_file_path, 'r')
+        query_sentence = file.read()
+        return dbtool.executeQuery(self._db, query_sentence,[season, "%"+team+"%", season, "%"+team+"%"])
+
+
+    def queryOver25Category (self, season, team, force):
+        query_sentence = self.readQuery()
+        return dbtool.executeQuery(self._db, query_sentence,[force, force, season, "%"+team+"%", season, "%"+team+"%"])
+
 
     def queryOver25 (self, season, team):           return self.runQuerySeasonTeam(season, team)
     def queryUnder25 (self, season, team):          return self.runQuerySeasonTeam(season, team)
@@ -59,6 +70,11 @@ class QueryFBDB (object):
         print inspect.stack()[0][3], "\t", team_1, self.queryOver25Home(season, team_1), "vs", team_2, self.queryOver25Away(season, team_2)
     def queryMatchUnder25HomeAway (self, season, team_1, team_2):
         print inspect.stack()[0][3], "\t", team_1, self.queryUnder25Home(season, team_1), "vs", team_2, self.queryUnder25Away(season, team_2)
+    def queryMatchOver25Category(self, season, team_1, team_2):
+        force_1 = dbtool.getTeamForce(self._db, team_1)
+        force_2 = dbtool.getTeamForce(self._db, team_2)
+        print inspect.stack()[0][3], "\t", team_1, self.queryOver25Category(season, team_1, force_2), "vs", team_2, self.queryOver25Category(season, team_2, force_1)
+
     def queryMatch2ndOver1st (self, season, team_1, team_2):
         print inspect.stack()[0][3], "\t", team_1, self.query2ndOver1st(season, team_1), "vs", team_2, self.query2ndOver1st(season, team_2)
     def queryMatch1stOver2nd (self, season, team_1, team_2):
@@ -102,3 +118,7 @@ class QueryFBDB (object):
             self.query2ndScore1stReceive("1415", match[0], match[1])
             self.queryMatchGoalMinute("1415", match[0], match[1])
             self.queryMatchTeamPerformance("1415", match[0], match[1])
+
+    def queryUpNextMatchesTest (self):
+        for match in dbtool.queryUpNextMatches(self._db):
+            self.queryMatchOver25Category("1415", match[0], match[1])
