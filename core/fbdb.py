@@ -219,14 +219,14 @@ def ParsePremier():
     fbdb_config = fbdbconfig.FBDBConfig('fbdb.conf')
     x = TransferMarktDriver(fbdb_config, '1415')
     web = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1/saison_id/2014'
-    premier = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=26&spieltagBis=26'
+    premier = 'http://www.transfermarkt.co.uk/premier-league/gesamtspielplan/wettbewerb/GB1?saison_id=2014&spieltagVon=27&spieltagBis=28'
     x.parseSeasonFixture(premier)
 
 
 def ParseItaly():
     fbdb_config = fbdbconfig.FBDBConfig('fbdb.conf')
     x = TransferMarktDriver(fbdb_config, '1415')
-    italy = 'http://www.transfermarkt.co.uk/serie-a/gesamtspielplan/wettbewerb/IT1?saison_id=2014&spieltagVon=24&spieltagBis=24'
+    italy = 'http://www.transfermarkt.co.uk/serie-a/gesamtspielplan/wettbewerb/IT1?saison_id=2014&spieltagVon=25&spieltagBis=25'
     x.parseSeasonFixture(italy)
 
 
@@ -275,7 +275,7 @@ def Test ():
 if __name__ == '__main__':
     #Test()
     #ParseNextFixture()
-    #ParsePremier()
-    #ParseItaly()
-    QueryNextFixture()
+    ParsePremier()
+    ParseItaly()
+    #QueryNextFixture()
     #UpdateTeamForce()
