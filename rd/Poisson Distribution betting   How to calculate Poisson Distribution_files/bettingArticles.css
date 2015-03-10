@@ -1,0 +1,185 @@
+﻿/* Layout */
+
+
+
+.block.related-page .item p
+{
+  margin-top:6px;
+  font-size:13px;
+  color:#4B4B4B;
+}
+
+.block.related-page .item .title
+{
+  font-size:14px;
+  font-weight:400;
+  margin-top:5px;
+  line-height:19px;
+}
+
+.block.regular-articles .item .subtitle
+{
+  height:auto;
+}
+
+#main.left .columns .col-43
+{
+  text-align:left;
+}
+
+/* Blockquotes */
+
+blockquote
+{
+  display:block;
+  width:240px;
+  float:left;
+  font-size:22px;
+  line-height:27px;
+  background-image:none;
+  font-family:Arial;
+  font-style:normal;
+  letter-spacing:-.5px;
+  color:#FFF;
+  font-weight:700;
+  text-align:left;
+  background-color:#f60;
+  margin:8px 30px 8px -25px;
+  padding:5px 25px;
+}
+
+.content blockquote,.content q
+{
+  display:block;
+  width:240px;
+  float:left;
+  font-size:22px;
+  line-height:27px;
+  background-image:none;
+  font-family:Arial;
+  font-style:normal;
+  letter-spacing:-.5px;
+  color:#FFF;
+  font-weight:700;
+  text-align:left;
+  background-color:#f60;
+  margin:8px 30px 8px -16px;
+  padding:5px 25px;
+}
+
+/* Pulse Newsletter */
+/* Pulse List Page */
+.pulse__intro
+{
+  padding-bottom:10px;
+  border-bottom:1px solid gray;
+  margin-bottom:10px;
+}
+
+.pulse__intro h4
+{
+  font-size:16px;
+}
+
+.pulse__list
+{
+  width:100%;
+  margin:0 auto;
+}
+
+.pulse__list__item
+{
+  float:left;
+  width:100%;
+  margin-bottom:10px;
+}
+
+.pulse__list__item__img
+{
+  width:29%;
+  display:inline-block;
+  float:left;
+}
+
+.pulse__list__item__text
+{
+  width:63%;
+  display:inline-block;
+  float:left;
+  margin-right:10px;
+}
+
+/* Pulse Individual Page */
+
+.pulse
+{
+  width:600px;
+  margin:0 auto;
+}
+
+.pulse__logo
+{
+  background-color:#0c1323;
+  padding:10px 10px 0;
+}
+
+.pulse__title
+{
+  font-size:20px;
+  padding:10px;
+}
+
+.pulse__item
+{
+  background-color:#0c1323;
+  float:left;
+  width:100%;
+  margin-bottom:10px;
+  color:#fff;
+  background-repeat: no-repeat;
+  background-size: 39%;
+  min-height: 120px;
+}
+
+.pulse__item__img
+{
+  width:46%;
+  display:inline-block;
+  float:left;
+  margin:0 10px;
+}
+
+.pulse__item__img img
+{
+  width:100%;
+}
+
+.pulse__item__text {
+display: inline-block;
+font-size: 14px;
+padding-top: 5px;
+margin-left: 40%;
+padding: 10px;
+}
+
+.pulse__item__text h2 {
+color: #f60;
+}
+
+.see-more-articles{ 
+  padding: 9px;
+  color: #fff;
+  background-color: #ff6600;
+  border-radius: 4px;
+  position: relative;
+  top: 14px;
+  box-shadow: #e83200 0px 4px;
+  margin: auto;
+  font-family: "Gotham", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.greybox {
+ background-color: #EAEAEA;
+ padding: 2px 15px;
+} 
+}

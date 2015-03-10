@@ -33,7 +33,7 @@ def createDatabase ():
     pass
 
 
-def executeQuery(db, sentence, listParam):
+def executeQueryFirst(db, sentence, listParam):
     with cursor(db) as cur:
         cur.execute(sentence, listParam)
         query_result = cur.fetchone()
@@ -50,7 +50,6 @@ def searchLeague (db, league_name):
     with cursor(db) as cur:
         cur.execute('select league_id from LEAGUE where name = ?', (league_name,))
         return cur.fetchone()
-
 
 
 

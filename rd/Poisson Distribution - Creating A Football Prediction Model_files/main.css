@@ -1,0 +1,385 @@
+#bet-container {
+width:auto;
+height:auto;
+position:relative;
+background: rgb(243, 242, 242);
+	
+}
+
+#bet-container table {
+border: none;
+position:relative;
+width:100%;
+border-style:none;
+border-collapse: separate;
+border-spacing: 0;
+white-space: normal;
+line-height: normal;
+font-weight: normal;
+font-size: medium;
+font-variant: normal;
+font-style: normal;
+color: -webkit-text;
+text-align: start;
+}
+
+#bet-container tr {
+display: table-row;
+border: none;
+border-style:none;
+vertical-align: inherit;
+border-color: inherit;
+height: 27px;
+}
+#bet-container table#bets td {
+padding-left: 5px;
+padding-right: 5px;
+}
+#bet-container label {
+cursor: pointer;
+color:white;
+margin-left: -1px;
+font-size: 15px;
+}
+#bet-container label.selected{
+cursor: pointer;
+color:#476385;
+}
+#bet-container .spinControl label {
+cursor: pointer;
+color:black;
+font-size:12px;
+padding-right:5px;
+font-family:Arial;
+}
+#bet-container .divider .each-way{margin-top: 3px;
+margin-left: 392px;
+position: absolute;}
+#bet-container for.stake {}
+#bet-container .divider {
+	position: relative;
+border: none;
+background: #3c526c;
+clear: both;
+font-weight: bold;
+border-bottom: 4px solid #e9c118;
+padding: 7px;
+
+}
+#bet-container .hide{
+	display:none !important;
+}
+#bet-container input[type=checkbox].checkbox-each{float: right;
+margin-top: 1px;
+margin-right: 8px;
+width: 12px;
+height: 15px;
+height: 18px;
+}
+
+#bet-container #fsType li {
+float: left;
+width: 148px;
+height: 29px;
+list-style: none;
+}
+#bet-container #fsType{
+margin-bottom:10px;
+}
+#bet-container #fsType ul{
+	margin:0px;
+	padding:0px;
+	margin-bottom:10px;
+	list-style: none;
+}
+#bet-container #fsType a {
+display: block;
+margin: 1px 0 0 1px;
+background: #A0A0A0;
+color: #FFF;
+line-height: 28px;
+text-decoration: none;
+text-align: center;
+font-size: .923em;
+font-weight: bold;
+}
+#bet-container #fsType a.selected {
+background-color: #2b3740;
+color: white;
+}
+#bet-container #fsType li,#bet-container #Calculator li:first-child {
+margin-top: 2px;
+margin-right: 2px;
+margin-left: 2px;
+}
+#bet-container #fsType a:hover, #bet-container #fsType a:focus {
+background-color: #2b3740;
+color: white;
+}
+
+#bet-container .bet-type{
+	position:relative;
+	background: #aba692;
+	text-align: right;	
+	border-bottom: 1px solid red;
+	width:100%;
+}
+
+#bet-container input[type=text] {
+	padding: 1px !important;
+margin-right: 0px !important;
+border: 1px solid #E4DEDE !important;
+-webkit-border-radius: 5px !important;
+border-radius: 1px !important;
+width: 57px !important;
+text-align: center !important;
+margin: 0px !important;
+background: white !important;
+}
+#bet-container select[type=text] {
+padding: 1px !important;
+margin-right: 0px !important;
+border: 2px solid #ccc !important;
+-webkit-border-radius: 5px !important;
+border-radius: 5px !important;
+width: 60px !important;
+text-align: center !important;
+margin: 0px !important;
+background: white !important;
+}
+#bet-container input[type=text]:focus {
+	background: #c3fdca !important;
+	opacity: 0.7 !important;
+}
+
+#bet-container input[type=radio]{
+	display:inline-block;
+	float:right;  margin-right: 3%; margin-top: 5%;
+}
+
+#bet-container input[type=checkbox]:checked, input[type=radio]:checked{  
+    display:inline-block;
+    width:15px;
+    height:15px;
+    font-weight:bold;
+}  
+
+#bet-container.format, #bet-container th{
+	background: #2b3740;
+	color: #ffffff;
+	height: 26px;
+	
+}
+
+#bet-container .selection-text {
+	color: #ffffff;
+	width:100px;
+	background: #2b3740;
+	text-align:center;
+	font-size: 14px;
+}
+
+#bet-container .selection-text:hover {
+	color: #db6a4d;
+	background: #2b3740;	
+	cursor: pointer;
+}
+
+#bet-container .submit-btns {
+margin-bottom: 10px;
+clear: both;
+width: auto;
+margin-top: 10px;
+}
+
+
+#bet-container .button {
+	position: relative;
+	font-weight: normal;
+	font-family: Verdana;
+	padding: 3px 15px 3px 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	margin: 15px;
+	line-height: 1;
+	border: solid 1px #fff;
+	height: 50px;
+	width: 120px;
+	border-bottom: 1px solid red;
+}
+
+
+#bet-container .button:hover{
+	background: #c5c4c4;
+	color: #000000;
+}
+
+#bet-container .button-080-15 {
+	font-size: 12px;
+	padding: 6px 20px 6px 8px;
+}
+
+#bet-container .button-000-15 {
+	font-size: 12px;
+	padding: 6px 20px 6px 8px;
+}
+
+#bet-container .button-080-15, .button-080-20 {
+	width: 117px;
+	height: 30px;
+	margin: 1px 0 0 1px;
+	background: #2b3740;
+	color: #FFF;
+	line-height: 18px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	border: none;
+	border-radius:0px;
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+#bet-container .button-000-15 {
+	width: 117px;
+	height: 30px;
+	margin: 1px 0 0 1px;
+	background: #A0A0A0;
+	color: #FFF;
+	line-height: 18px;
+	border-radius:0px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+#bet-container .num-of-selection {
+float:right;margin-top: 4px;
+}
+#bet-container .num-of-selection .selction{
+margin-top:4px;
+float:left;
+}
+#bet-container .num-of-selection .adddel{
+margin-top:4px;
+}
+#bet-container #fsType .num-of-selection .spinControl li a {
+width: 20px;
+height: 21px;
+float: left;
+line-height: 20px;
+list-style: none;
+}
+
+#bet-container .num-of-selection .selction p{
+float:left;
+line-height:12px;
+}
+#bet-container .num-of-selection .selction p,#bet-container .num-of-selection .selction input[type=text]{
+float:left !important;
+
+}
+#bet-container .num-of-selection .spinControl li input[type=text]{
+width: 21px !important;
+height: 16px !important;
+padding: 2px !important;
+margin-right: 0px !important;
+border: 2px solid #ccc !important;
+-webkit-border-radius: 5px !important;
+border-radius: 5px !important;
+}
+#bet-container #fsType .num-of-selection .spinControl ul li{
+list-style: none;
+float:left;
+}
+#bet-container #fsType .num-of-selection .spinControl ul li.text{
+
+width:131px;
+
+}
+#bet-container.format, #bet-container th.format{
+font-size: 14px;padding-right: 3px;
+}
+#bet-container .disabled{
+	opacity:0.2;
+	background: #A0A0A0;
+	border: 2px solid #130B0B !important;
+
+}
+#bet-container .no-calculation{
+	opacity:0.2;
+	background: #A0A0A0;
+	color:white;
+	
+
+}
+#bet-container #fsType .input-button{
+width: 216px;
+height: 28px;
+margin: 1px 0 0 1px;
+background: #A0A0A0;
+color: #FFF;
+line-height: 28px;
+text-decoration: none;
+text-align: center;
+font-size: .923em;
+font-weight: bold;
+border: none;
+cursor: pointer;
+font-size: 14px;
+}
+#bet-container #fsType .inc-dec{
+width: 20px;
+cursor: pointer;
+height: 21px;
+margin: 1px 0 0 1px;
+background: #A0A0A0;
+color: #FFF;
+float: left;
+line-height: 20px;
+border: none;
+
+}
+#bet-container #fsType .num-of-selection .spinControl ul li.input-width{
+width:30px;
+}
+#bet-container #fsType .num-of-selection .spinControl ul li.bi{
+width:21px;
+}
+#bet-container #fsType .num-of-selection .spinControl ul li.bd{
+width:21px;
+}
+#bet-container .summary .summary-text {
+	background: #2b3740;
+	color: #fff;
+	width: auto;
+	font-weight: bold;
+	padding: 7px;
+	padding-left: 14px;
+	padding-right: 63px;
+	border-top: 2px solid #db6a4d;
+	font-size: 14px;
+}
+#bet-container #fsType label.stake,#bet-container #fsType  label.each-way{
+color:gray;
+font-size:13px;
+}
+#bet-container #fsType  label.each-way{
+color: gray;
+float: right;
+padding-top: 2px;
+
+}
+#bet-container #fsType .stake-holder{
+margin-top: 18px;
+margin-left: 5px;
+float: left;
+width: 52%;
+}

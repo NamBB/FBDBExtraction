@@ -1,0 +1,46 @@
+/* odds */
+span.odds { background: #fffec4; border: 1px solid #e9e8b8; border-radius: 3px; padding: 1px 2px; font-size: smaller; font-weight: bold; }
+span.odds span { display: none; }
+
+/* all widgets */
+.rightside div.widget { margin-bottom: 10px; padding: 10px; background: #f6f6f6; } 
+.rightside div.widget h3 { color: #fff; height: 45px; padding-left: 20px; background: url('http://www.linuxpokersites.net/wp-content/themes/sports_betting_online/images/topmenu-li.png') repeat-x; line-height: 45px; position: relative; margin-bottom: 10px; text-transform: uppercase; font-size: 15px; }
+.rightside div.widget h3:after { position: absolute; height: 5px; width: 100%; background: url('http://www.linuxpokersites.net/wp-content/themes/sports_betting_online/images/yellow-line.png') repeat-x; top: 45px; left: 0; content: ""; }
+
+/* select widget */
+div.odds_select { text-align: left; }
+div.odds_select a { display: inline-block; font-size: 14px !important; font-weight: bold; background: #666666; color: #fff !important; padding: 2px 4px 4px; margin-right: 8px; text-align: center; cursor: pointer; }
+div.odds_select a:last-child { margin-right: 0px; }
+div.odds_select a.active, div.odds_select a:hover { background: #203958; color: #fff !important; }
+div.odds_select a.active { cursor: default; }
+div.odds_select a span { display: block; font-weight: normal; font-size: 11px; line-height: 11px; }
+
+/* odds calculator widget */
+.odds_calc { text-align: center; margin: 10px 0px; }
+.odds_calc h2 { color: #dd0403 !important; }
+.odds_calc .form { width: 275px; margin: 0; }
+.odds_calc .form p { margin: 0px 0px 10px; color: #fff; }
+.odds_calc .form .formfield { background: #fff; margin: 0px; padding: 5px 15px 5px 0; text-align: right;}
+.odds_calc .btn { text-align: center; }
+.odds_calc .form .left { font-weight: bold; padding-top: 5px; color: #1a303a; float: left; width: 170px; font-size: 13px; text-align: right; }
+.odds_calc .form .right { float: right; width: 80px; text-align: right; }
+.odds_calc .form .right span { cursor: pointer; color: #666; font-size: 11px; text-decoration: underline; line-height: 12px; }
+.odds_calc .form .right input { border: 0px; background: #203958; color: #fff; padding: 3px; font-weight: bold; width: 50px; }
+
+/* betting box */
+.bettingtips_box { width: 220px; float: right; background: #153051; padding: 4px; margin: 0 0 15px 15px; }
+.bettingtips_box .bt_head { text-align: center; padding: 5px 0 9px; }
+.bettingtips_box .bt_head img { cursor: pointer; border: 1px solid #fff; }
+.bettingtips_box .bt_name { background: #fff; border-bottom: 3px solid #153051; padding: 3px; text-align: center; font-size: 16px; }
+.bettingtips_box .bt_name a { color: #000; text-decoration: none; font-weight: bold; }
+.bettingtips_box .bt_odds { background: #fff; border-bottom: 3px solid #153051; }
+.bettingtips_box .bt_links { background: #fff; }
+.bettingtips_box .bt_odds .bt_odd, .bettingtips_box .bt_links .bt_link { border-bottom: 1px solid #ccc; padding: 3px; text-align: left; font-size: 14px; }
+.bettingtips_box .bt_odds a, .bettingtips_box .bt_links a { color: #000; text-decoration: none;}
+.bettingtips_box .bt_odds .bt_odd a { text-decoration: none; }
+.bettingtips_box .bt_odds .bt_odd a span { text-decoration: none; float: right; }
+
+/* carroussel */
+.tips_carroussel { width: 275px; }
+.tips_carroussel .bettingtips_box { width: 268px; float: none; margin: 0px; }
+.tips_carroussel .display_tip_carroussel { display: none; }

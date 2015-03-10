@@ -1,0 +1,892 @@
+
+<!-- saved from url=(0092)https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/menu174.js"></script><script src="./Poisson Distribution - Creating A Football Prediction Model_files/4921.js" async="" type="text/javascript"></script><script id="twitter-wjs" src="./Poisson Distribution - Creating A Football Prediction Model_files/widgets.js"></script><script id="facebook-jssdk" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/all.js"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/js"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/js"></script><link rel="stylesheet" type="text/css" href="./Poisson Distribution - Creating A Football Prediction Model_files/widget020.top.svg.css" media="all"><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in.php"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(1).php"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(2).php"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(3).php"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(4).php"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(5).php"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(6).php"></script><script type="text/javascript" async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/in(7).php"></script></head><body data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./Poisson Distribution - Creating A Football Prediction Model_files/hub.0e7931819b6cfb483aa5ddbe7670a1c6.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><style=" .only-desctop.only-mobile="" {="" display:none;}"="">
+
+
+
+    
+
+<meta name="google-site-verification" content="kOGp4p3qDbP6CKezfoEQmNMIZLKJ6HZ-P--727fX6Zc">
+
+<script async="" src="./Poisson Distribution - Creating A Football Prediction Model_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27401981-1', 'sportsbettingonline.net');
+  ga('send', 'pageview');
+
+
+
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    
+	
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.3.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Poisson Distribution - Creating A Football Prediction Model</title>
+<meta name="description" content="Here we show you how we are always finding value by creating a Football prediction model using Poisson Distribution.">
+<link rel="canonical" href="./Poisson Distribution - Creating A Football Prediction Model_files/Poisson Distribution - Creating A Football Prediction Model.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Poisson Distribution - Creating A Football Prediction Model">
+<meta property="og:description" content="Here we show you how we are always finding value by creating a Football prediction model using Poisson Distribution.">
+<meta property="og:url" content="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/">
+<meta property="og:image" content="https://www.sportsbettingonline.net/wp-content/uploads/2014/07/FootballPredictionModels1.jpg">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title=" » Football Prediction Model: Poisson Distribution Comments Feed" href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/feed/">
+<link rel="stylesheet" id="fontawesome-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bet_calculator_style-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/main.css" type="text/css" media="all">
+<link rel="stylesheet" id="mo_style-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mo_formatstyle-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/decimal.css" type="text/css" media="all">
+<link rel="stylesheet" id="cntctfrm_form_style-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/form_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mrp_-frontend-style-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-polls-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/polls-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-postratings-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/postratings-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/pagenavi-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="content-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/content.css" type="text/css" media="all">
+<link rel="stylesheet" id="jcarousel-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/skin.css" type="text/css" media="all">
+<link rel="stylesheet" id="wordpress-popular-posts-css" href="./Poisson Distribution - Creating A Football Prediction Model_files/wpp.css" type="text/css" media="all">
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/jquery.min.js"></script>
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/javascript.js"></script>
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/jquery.jcarousel.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sportsbettingonline.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sportsbettingonline.net/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.1.1">
+<link rel="shortlink" href="https://www.sportsbettingonline.net/?p=11648">
+
+			<style type="text/css">
+				#wpadminbar .quicklinks li#wp-admin-bar-clickystats {
+					height: 28px
+				}
+
+				#wpadminbar .quicklinks li#wp-admin-bar-clickystats a {
+					height: 28px;
+					padding: 0
+				}
+
+				#wpadminbar .quicklinks li#wp-admin-bar-clickystats a img {
+					padding: 4px 5px;
+					height: 20px;
+					width: 99px;
+				}
+			</style>
+														<style type="text/css">
+					.mrp-custom-full-star {
+			background: url() no-repeat;
+			width: 32px;
+			height: 32px;
+			background-size: 32px 32px;
+			image-rendering: -moz-crisp-edges;
+			display: inline-block;
+		}
+		.mrp-custom-half-star {
+			background: url() no-repeat;
+			width: 32px;
+			height: 32px;
+			background-size: 32px 32px;
+			image-rendering: -moz-crisp-edges;
+			display: inline-block;
+		}
+		.mrp-custom-empty-star {
+			background: url() no-repeat;
+			width: 32px;
+			height: 32px;
+			background-size: 32px 32px;
+			image-rendering: -moz-crisp-edges;
+			display: inline-block;
+		}
+		.mrp-custom-hover-star {
+			background: url() no-repeat;
+			width: 32px;
+			height: 32px;
+			background-size: 32px 32px;
+			image-rendering: -moz-crisp-edges;		
+			display: inline-block;		
+		}
+					
+			.mrp-star-hover {
+				color: #ffba00 !important;
+			}
+			.mrp-star-full, .mrp-star-half, .mrp-star-empty /*, .mrp-thumbs-up-on, .mrp-thumbs-up-off, .mrp-thumbs-down-on, .mrp-thumbs-down-off*/ {
+				color: #ffd700;
+			}
+		</style>
+		
+		<style type="text/css" media="screen">
+			#catapult-cookie-bar {
+				display: none;
+				direction: ltr;
+				color: #dddddd;
+				min-height: 30px;
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				z-index: 99999;
+				padding:6px 20px 4px;
+				background-color: #464646;
+				text-align:left;
+			}
+			#catapult-cookie-bar a {
+				color: #dddddd;
+			}
+			button#catapultCookie {
+				margin:0 20px;
+				line-height:20px;
+				background:#45AE52;
+				border:none;
+				color: #dddddd;
+				padding:4px 12px;
+				border-radius: 3px;
+				cursor: pointer;
+				font-size: 13px;
+				font-weight: bold;
+			}
+		</style><style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('https://www.sportsbettingonline.net/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+				<!-- WordPress Popular Posts v3.2.1 -->
+				<script type="text/javascript">//<![CDATA[
+
+					// Create XMLHttpRequest object and set variables
+					var xhr = ( window.XMLHttpRequest )
+					  ? new XMLHttpRequest()
+					  : new ActiveXObject( "Microsoft.XMLHTTP" ),
+					url = 'https://www.sportsbettingonline.net/wp-admin/admin-ajax.php',
+					params = 'action=update_views_ajax&token=f0a3220917&id=11648';
+					// Set request method and target URL
+					xhr.open( "POST", url, true );
+					// Set request header
+					xhr.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" );
+					// Hook into onreadystatechange
+					xhr.onreadystatechange = function() {
+						if ( 4 == xhr.readyState && 200 == xhr.status ) {
+							if ( window.console && window.console.log ) {
+								window.console.log( xhr.responseText );
+							}
+						}
+					}
+					// Send request
+					xhr.send( params );
+
+				//]]></script>
+				<!-- End WordPress Popular Posts v3.2.1 -->
+				
+    <link href="./Poisson Distribution - Creating A Football Prediction Model_files/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <link href="./Poisson Distribution - Creating A Football Prediction Model_files/tabs.css" rel="stylesheet" type="text/css">
+    <link href="./Poisson Distribution - Creating A Football Prediction Model_files/styles.css" rel="stylesheet" type="text/css">
+    <link href="./Poisson Distribution - Creating A Football Prediction Model_files/style(1).css" rel="stylesheet" type="text/css">
+    <link href="./Poisson Distribution - Creating A Football Prediction Model_files/responsive.css" rel="stylesheet" type="text/css">
+
+    <script defer="" type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/jquery.bxslider.min.js"></script>
+    <script defer="" type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/tabs.js"></script>
+	<script defer="" type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/jquery.cookie.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.custom-select .head-select').click(function(){
+                $(this).siblings('.list-select').slideToggle();
+                return false;
+            });
+
+            if($.cookie('odds_format')=='decimal'){
+				$('.head-select-odds').text('Decimal (6.00)');			
+			}else if($.cookie('odds_format')=='fractional'){
+				$('.head-select-odds').text('Fractional (5/1)');			
+			}else if($.cookie('odds_format')=='moneyline'){
+				$('.head-select-odds').text('US/Moneyline (+500)');			
+			}else if($.cookie('odds_format')=='hongkong'){
+				$('.head-select-odds').text('US/Moneyline (+500)');			
+			}else if($.cookie('odds_format')=='hongkong'){
+				$('.head-select-odds').text('HongKong (5.00)');			
+			}else if($.cookie('odds_format')=='indonesian'){
+				$('.head-select-odds').text('Indonesian (5.00)');			
+			}else if($.cookie('odds_format')=='malaysian'){
+				$('.head-select-odds').text('Malaysian (-0.20)');			
+			}else{
+				$('.head-select-odds').text('Decimal (6.00)');
+			}
+			
+			
+			 $('.custom-select-odds .head-select-odds').click(function(){
+                $('.list-select-odds').show();
+				$('.list-select-odds li a').click(function(){
+					$('.head-select-odds').text($(this).text());
+					$('.list-select-odds').hide();
+				});
+                return false;
+            });
+			
+            $('.topmenu > ul').prepend('<li class="current"><a href="#">Main Menu</a></li>');
+
+            $('.topmenu .current').click(function() {
+                $('.topmenu li').not('.current').toggle();
+                return false;
+            });
+
+            if($('.expert-slider').length > 0){
+                $('.expert-slider').jcarousel({
+                    scroll: 1
+                });
+            }
+
+            if($('.wp-polls input[type="radio"]').length > 0) {
+                $('.wp-polls input[type="radio"]').iCheck({
+                    checkboxClass: 'icheckbox_minimal-blue',
+                    radioClass: 'iradio_minimal-blue'
+                });
+            }
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        function unhide(divID) {
+            var item = document.getElementById(divID);
+            if (item) {
+                item.className=(item.className=='showcountry')?'hidecountry':'showcountry';
+            }
+
+        }
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+		if ($.cookie('promoShow') == 'false') {
+            $('.promo-area-part').hide();
+			$("span.promo-close").text("OPEN");
+		}	  
+			$("span.promo-close").click(function (){
+				
+				$(".promo-area-part").slideToggle("slow", function(){		
+				
+					if($(this).is(":visible")){
+						$("span.promo-close").text("CLOSE X");
+						$.cookie("promoShow", "true", { expires: 7 });						
+					}else{
+						$("span.promo-close").text("OPEN");
+						$.cookie("promoShow", "false", { expires: 7 });											
+					}
+				});
+			});
+        });
+    </script>
+
+    
+
+
+
+<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+<div class="top-bg">
+    <div class="wrapper">
+	        <div class="topheader">
+            <div class="logo">
+                <a href="https://www.sportsbettingonline.net/">
+                    <img src="./Poisson Distribution - Creating A Football Prediction Model_files/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+	        <div class="topmenu">
+            <ul id="menu-top-menu-bar" class="menu"><li class="current"><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#">Main Menu</a></li><li id="menu-item-6408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6408"><a href="https://www.sportsbettingonline.net/">Home</a></li>
+<li id="menu-item-8416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8416"><a href="https://www.sportsbettingonline.net/country/us-sites/">US Sportsbooks</a></li>
+<li id="menu-item-8350" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8350"><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#">Free Tips &amp; Picks</a>
+<ul class="sub-menu">
+	<li id="menu-item-9195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9195"><a href="https://www.sportsbettingonline.net/football/football-tips/">Football Tips</a></li>
+	<li id="menu-item-9973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9973"><a href="https://www.sportsbettingonline.net/long-shot-bets/">Long Shot Bets</a></li>
+	<li id="menu-item-8467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8467"><a href="https://www.sportsbettingonline.net/nfl/nfl-picks/">NFL Picks</a></li>
+	<li id="menu-item-7368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7368"><a href="https://www.sportsbettingonline.net/nba-betting/nba-picks/">NBA Picks</a></li>
+	<li id="menu-item-9965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9965"><a href="https://www.sportsbettingonline.net/sbo-weekly/">SBO Weekly</a></li>
+	<li id="menu-item-14878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14878"><a href="https://www.sportsbettingonline.net/horse-racing/tips/">Horse Racing Tips</a></li>
+</ul>
+</li>
+<li id="menu-item-12182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12182"><a href="https://www.sportsbettingonline.net/free-bets-bonuses/">Free Bets</a></li>
+<li id="menu-item-6414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6414"><a href="https://www.sportsbettingonline.net/mobile/">Mobile Betting</a></li>
+<li id="menu-item-12006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12006"><a href="https://www.sportsbettingonline.net/blog/">Blog</a></li>
+</ul>        </div>
+	 
+
+    <div class="content inside-article"> 
+ 
+        <!--div class="breadcrumbs">
+    <span class="here">
+        You are here:
+    </span>
+    <a href="https://www.sportsbettingonline.net">
+        Sports Betting Online
+    </a>
+
+    <span class="current">
+        >	Football Prediction Model: Poisson Distribution    </span>
+</div-->
+<div class="breadcrumbs">
+    <span class="here">
+        You are here:
+    </span>
+<!-- Breadcrumb NavXT 5.2.0 -->
+<a title="Go to ." href="https://www.sportsbettingonline.net/" class="home">Home</a> &gt; <a title="Go to Strategy." href="https://www.sportsbettingonline.net/strategy/" class="post post-page">Strategy</a> &gt; Football Prediction Model: Poisson Distribution</div> 
+ 
+        <div class="social">
+    <ul>
+                    <li>
+                <a target="_blank" href="http://plus.google.com/107145122318479793594"><img width="16" height="16" src="./Poisson Distribution - Creating A Football Prediction Model_files/gplus-icon.png" alt=""></a>
+            </li>
+                        <li>
+            <a target="_blank" href="https://www.sportsbettingonline.net/feed"><img width="16" height="16" src="./Poisson Distribution - Creating A Football Prediction Model_files/rss-icon.png" alt=""></a>
+        </li>
+                    <li>
+                <a target="_blank" href="https://twitter.com/SBOpicks"><img width="16" height="16" src="./Poisson Distribution - Creating A Football Prediction Model_files/twitter-icon.png" alt=""></a>
+            </li>
+                                    <li>
+                <a target="_blank" href="https://www.facebook.com/sportsbettingonline.net"><img width="16" height="16" src="./Poisson Distribution - Creating A Football Prediction Model_files/fb-icon.png" alt=""></a>
+            </li>
+            </ul>
+</div> 
+ 
+        <div class="clearblock"></div> 
+ 
+         
+            <div class="main-banner only-tablet"> 
+                <img width="205" height="185" src="./Poisson Distribution - Creating A Football Prediction Model_files/FootballPredictionModels1.jpg" class="attachment-full wp-post-image" alt="FootballPredictionModels"> 
+            </div> 
+         
+ 
+        <div class="mainblock"> 
+ 
+             
+                <div class="main-banner only-desctop only-mobile"> 
+                    <img width="205" height="185" src="./Poisson Distribution - Creating A Football Prediction Model_files/FootballPredictionModels1.jpg" class="attachment-full wp-post-image" alt="FootballPredictionModels"> 
+                </div> 
+             
+ 
+            <div class="inside article"> 
+                 
+ 
+                    <p><img class="aligncenter" src="./Poisson Distribution - Creating A Football Prediction Model_files/footballpredictionmodels_articles1.jpg" alt=""></p>
+<p>In previous articles, we’ve looked at&nbsp;odds and probabilities, then used this to understand the concept of&nbsp;value betting. Whilst discussing value, we touched on creating our own prediction model to allow you to generate your own probabilities and odds for certain sporting events. This can then be used to compare your odds with those of the bookmaker to identify value in the market and (touch wood) ensure sustained profit in the long term. In this article, we go through the steps required to create our own football (soccer) prediction model using <em>Poisson Distribution</em>, as well as look at some of the limitations of this approach.</p>
+<p>So what is Poisson Distribution? If you Google it, you get back a lot of scary definitions that are very difficult to understand, such as <em>“Poisson distribution is the probability of the number of events that occur in a given interval when the expected number of events is known and the events occur independently of one another”</em>. What this basically means is that when we know the average number of times that an event will happen, we can use Poisson to calculate how likely other numbers deviate from this average.</p>
+<p>Luckily though, we don’t need to fully understand the concept, the formula or how to calculate it because Microsoft Excel has a formula which can work out Poisson automatically. All we really need to know is that it can be used to calculate the probability of outcomes for a football match, which in turn can be turned into odds which we can use to identify value in the market. This covers a number of goal based markets such as Match Outcome (1×2), Correct Score, Over / Under Match Goals, Both Teams To Score and <a href="http://www.sportsbettingonline.net/strategy/asian-handicap-betting/">Asian Handicap</a>. There is plenty of more in depth reading into Poisson online, but we won’t be delving into that level in this article.</p>
+<p>Although it has its limitations and faults, Poisson is a useful starting point to understand the fundamentals of creating your own odds. It can work as a standalone model which you use to advise your betting, or it can be used to understand the basics before going on to explore further, more complicated methods. It also has applications to other sports, but in this article we will just look at football.</p>
+<h2>So how do we actually create a predictive model for football games based on Poisson distribution?</h2>
+<p>As a quick summary, what we are going to do is take historical results to calculate the number of goals teams score and concede. These averages are compared to the league average and used to create values for attacking strength and defensive strength for every team, which are then turned into goal expectation figures. This metric is put into a Poisson Distribution formula which works out the probability of every result when two teams face each other. We then take these probabilities to create our own odds, compare these against the bookies’ odds, then identify where there is value in the market because the bookies are offering more generous odds that we’d expect. Simple!</p>
+<p>The beauty with a method like this is that there are a number of different points during the process where you might decide to try a different value as an input or may want to include something else in the calculation. You may even choose to calculate goal expectation in a completely different way, for instance, by using Elo ratings which ranks all teams against each other – as teams play each other, their respective rating will increase or decrease based on the outcome of the result – and will be covered in a later article. That is perfectly fine and will help you develop and refine your predictive model during its lifetime.</p>
+<p>The below is a slightly modified version to the method I used throughout the 2013/14 season – after all, I don’t want to give all of my secrets away – however, it will allow you to create your own predictive model if you follow these steps.</p>
+<ol>
+<li>The first step is to decide which league(s) you want to build a predictive model for. Until you get your model to a stage where you are happy with it, it makes sense to focus only on one league, preferably one you know well. Once everything is working as you wish, then the model can be replicated for different leagues. You will go through a period of testing and improving, so it makes sense to do this for one league to start with rather than making the exact same changes for multiple leagues. Trust me, there is nothing worse than taking on too much at the start by attempting to predict every football game being played. For this example, we will use the English Premier League.</li>
+<li>Open Microsoft Excel. It will become your best friend! Using a website such as <a href="http://www.whoscored.com/" target="_blank">WhoScored.com</a>, <a href="http://www.soccerway.com/" target="_blank">Soccerway.com</a> or <a href="http://www.football-data.co.uk/">Football-Data.co.uk</a>, copy and paste all results from last season into a format that you can manipulate in Excel – for example:<img class="aligncenter size-full wp-image-11741" src="./Poisson Distribution - Creating A Football Prediction Model_files/1.jpg" alt="1" width="376" height="212">These results are the base data that help you get to the point where you can create your own odds. As more games are played, you will add these to this list of results, but we don’t need to think about that just yet. This is one of the first points where you need to decide how many results you want to use as an input into your calculation. Some people may use five games, others may use 10, whilst some may use data for the entire season. What you choose is up to you and this may be something you wish to tinker with as you refine your model. For this example, we will use all 38 games from the 2013/14 season.</li>
+<li>If you’re good with Excel, you can use all of these results to calculate the next step. If you’re not good with formulas such as Sum Ifs and Count Ifs, then a shortcut is to create another table based on the final league table. The key things we are looking to capture is goals scored and goals conceded by teams in games at home and on the road. This will then be used to work out the total goals in the league, average goals in the league, in addition to average goals for and against per team.Goals For and Goals Against are simple Sums in Excel, whilst the two averages are worked out by dividing the total goals by the games played. For instance, Arsenal’s Average Goals is simply 36 / 19 = 1.89. The below shows two tables – one for teams at home and one for teams against – showing all of these calculations.<img class="aligncenter size-full wp-image-11742" src="./Poisson Distribution - Creating A Football Prediction Model_files/2.jpg" alt="2" width="581" height="468"><img class="aligncenter size-full wp-image-11743" src="./Poisson Distribution - Creating A Football Prediction Model_files/3.jpg" alt="3" width="625" height="468"></li>
+<li>Now that we have these key stats, we can use them to calculate the attacking strength and defensive strength for each team. Again, this is a relatively simple thing to do and can be achieved by dividing Average Goals For or Average Goals Against by the league average.For example, to work out Arsenal’s home attacking strength, it would be 1.89 divided by 1.57 which equals 1.20 – this means that Arsenal score 20% more goals at home than the average team.As another example, to work out Aston Villa’s away defensive strength, you would divide 1.68 by 1.57 to give 1.07 – this shows that Villa have a worst defence than an average team as they concede 7% more goals.<br>
+If we repeat this calculation for all teams, we can work out the attacking and defensive strengths when playing at home and when playing away:<img class="aligncenter size-full wp-image-11744" src="./Poisson Distribution - Creating A Football Prediction Model_files/4.jpg" alt="4" width="563" height="415"></li>
+<li>We now use this reference table of attacking and defensive strengths to calculate how many goals we expect a team to score in a particular match – we call this the Goal Expectancy. It makes sense that a team like Aston Villa are likely to have higher goal expectancy against a team like Sunderland compared to a team like Arsenal. This is because of two main reasons – (1) Arsenal’s defence will be stronger than Sunderland’s, thus Villa will struggle to score, and (2) Sunderland’s attack will be weaker than Arsenal’s, so Villa are likely to concede less goals. These two factors create the Goal Expectancy metric, which can be worked out for any match. If we take Arsenal vs Aston Villa at the Emirates Stadium as an example, we can see that Arsenal would be expected to score an average 2.02 goals to Villa’s 0.53 goals:
+<ol style="margin-left: 17px; color: #676767;">
+<li><strong>Home Team Goal Expectancy:</strong>&nbsp;home attacking strength (1.20) x away defensive strength (1.07) x average goals home (1.57) = 2.02</li>
+<li><strong>Away Team Goal Expectancy:</strong>&nbsp;away attacking strength (1.16) x home defensive strength (0.48) x average goals away (0.96) = 0.53</li>
+</ol>
+</li>
+<li>Hopefully you are still with me…if not, go back and read again. If you are, then great, let’s continue!What we now need to do is use the Poisson Distribution in Excel to calculate the probability of all possible scorelines for the hypothetical Arsenal vs Aston Villa game. The best way I’ve found of doing this is to set up a matrix with all possible scorelines from 0-0 to 10-10. Again, you could decide to change this and continue up to 15-15, or even stop at 8-8 if you think it is unlikely a team will score more than 8 goals.In Microsoft Excel, the Poisson Distribution formula is:
+<p style="text-align: center;"><strong>Poisson = (x, mean, cumulative)</strong></p>
+<p><strong>Where:</strong><br>
+<strong>x</strong> = Number of goals<br>
+<strong>Mean</strong> = the probability of that team scoring a goal i.e. goal expectancy<br>
+<strong>Cumulative</strong> = Is set to FALSE, so that the formula returns a value exactly equal to x (number of goals)</p>
+<p>Obviously we don’t have cell references in this example as you’d find in Excel, but the formula should still make sense. If we use 0-0 as an example, the Poisson Distribution formula would look like this:</p>
+<ol style="margin-left: 17px; color: #676767;">
+<li>=((POISSON(Home score 0 cell, Home goal expectancy, FALSE)* POISSON(Away score 0 cell, Away goal expectancy, FALSE)))*100</li>
+<li>If we add values this equates to =((POISSON(0, 2.02, FALSE)* POISSON(0, 0.53, FALSE)))*100</li>
+<li>Which produces a 7.808% probability that the score will be 0-0</li>
+</ol>
+<p>If we use the formula for all of these scorelines up to 10-10 and use a matrix, then something like this will be created. As you can see, the most likely scoreline is 2-0 to Arsenal (15.93% probability), closely followed by 1-0 to Arsenal (15.77% probability).</p>
+<p><img class="aligncenter size-full wp-image-11745" src="./Poisson Distribution - Creating A Football Prediction Model_files/5.jpg" alt="5" width="632" height="251"></p></li>
+<li>Should you enjoy betting on the Correct Score market, then the above table will give you a decent indication of expected scorelines. However, what we can do on top of this is create our own odds for common betting markets using these probabilities. For example:
+<ol style="margin-left: 17px; color: #676767;">
+<li><strong>Home Win:</strong>&nbsp;If you add up the probability of all results where the home team wins (e.g. 1-0, 2-0, 2-1, 3-2 etc) then you will have the overall likelihood of a Home Win.</li>
+<li><strong>Under 2.5 Goals:</strong>&nbsp;If you add up the probability of all scorelines which have less than 3 goals in the game (i.e. 0-0, 1-1, 1-0, 0-1, 2-0, 0-2), then you have the overall probability of Under 2.5 match goals.</li>
+<li><strong>Both Teams To Score Yes:</strong>&nbsp;If you add up the probability of all scorelines in which both teams find the back of the net (e.g. 1-1, 2-1, 3-1, 2-2 etc), you are left with the probability of Both Teams To Score.</li>
+</ol>
+<p>In the search for value, you may also consider looking at other markets which are goal based. For example, Over / Under 1.5 Goals, Team to Win to Nil, Double Chance (win and draw) or Asian Handicap, although the latter does require a bit more work. However, the below table gives the probability of a few of the most common markets by using the principle of the above bullet points:</p>
+<p><img class="aligncenter size-full wp-image-11746" src="./Poisson Distribution - Creating A Football Prediction Model_files/6.jpg" alt="6" width="189" height="158"></p></li>
+<li>The next step is to turn the probability into decimal odds. If you remember a previous article when we discussed <a href="http://www.sportsbettingonline.net/strategy/understanding-probability-odds-overround-vig/">probability and odds</a>&nbsp;, you will – or should – remember that the formula to turn decimal odds into probabilities is (1 / Decimal Odds) x 100. To convert from probabilities into decimal odds, just do the reverse, i.e. 100 / probability. The table below shows the associated odds for these probabilities:<img class="aligncenter size-full wp-image-11747" src="./Poisson Distribution - Creating A Football Prediction Model_files/7.jpg" alt="7" width="270" height="161"></li>
+<li>Remember that bookies include an edge – called an overround – when they work out there odds so that they can guarantee profit. It is therefore important to add this margin into your odds to best reflect this overround. The margin you choose is up to you – it could be from 5% up to 20% – but for this example we will use 7.5%. Simply multiply the true odds by the margin, for example, Odds x 1.075. The table below shows the new odds with the margin included:<img class="aligncenter size-full wp-image-11748" src="./Poisson Distribution - Creating A Football Prediction Model_files/8.jpg" alt="8" width="352" height="161"></li>
+<li>Now comes the fun part; deciding on where to place your bets. You have your own odds and now need to compare these against the odds from bookmakers. This is the core of value betting which was discussed in a previous article&nbsp;. As a recap, <a href="http://www.sportsbettingonline.net/strategy/the-hunt-for-value-in-sports-betting/">value betting</a> is all about looking for opportunities where you feel that the bookies’ are offering higher odds than you’d expect. As you have your own odds and can easily find those from your favourite bookie, it is a simple process of comparing the two and seeing where the bookies’ odds are higher. If you get value, then you bet – although you may wish to qualify out some bets by doing additional research to see which players are injured, motivational factors, played in Europe mid-week etc.In your spreadsheet, add an additional two columns – one for the bookies’ odds and one for whether to bet or not. Manually add the bookies’ odds to the spreadsheet, then go through seeing where there is value. The below is used for illustrative purposes, but gives you an indication of the type of thing you may find when comparing the odds. In this scenario, the value is with backing the draw, backing the Aston Villa win and backing Under 2.5 Goals.</li>
+<li>That’s it, your predictive model is complete. Now go make some profit!Actually, it’s not that easy. As mentioned earlier, you may go through a process of tinkering if things don’t look quite right, or after a while of monitoring the results to try and get more accurate.If everything looks OK with the model, you will then need to expand it to include the same calculations for every other game in that league. At the moment, we are only calculating the odds and bets for one match. Rather than use the same table, it makes sense to set up another 9 of these tables so that you can do one for each league game.</li>
+<li>It will be time consuming to start with, but try to get to a point where the spreadsheet can be as automated as possible – a version 2.0 if you will. For instance, with my model, I input the fixtures, then the attacking and defensive metrics are calculated automatically. This is then pulled through to another sheet where the Poission Distribution formula calculates all of the odds. I then only need to manually add the odds for all of the games directly from the bookies, then the spreadsheet tells me which bets to place.I have also expanded my model to include Premier League, La Liga, Serie A and Bundesliga fixtures, as well as used it previously for MLS and Brazil Serie A. The model stays the same, the only difference is the inputs.</li>
+<li>As games progress and results are known, you will need to include these in your calculations. If your model is working on data from last season and not including data from this season, then it is likely to be out of date. In Steps 2 and 3, we used either a list of results or the league table to work out the numbers of goals and averages. You need to find a way of incorporating these most recent results in your calculations. I simply add these to my list of results and ensure the formulas cover the new results. You may also choose to remove old results that you deem to be too long ago and now redundant. For example, if your model is based on 38 games (19 home, 19 away), then you would need to add the most recent home game whilst deleting the oldest home game to keep it at 19.</li>
+</ol>
+<p>And there it is, your own predictive football model. Obviously I will give a couple of caveats at this point as no predictive model can be spot on or take into account every factor in the world. Some like Poisson Distribution, others don’t. I’ve personally found that it has been profitable for me over the last season, but that’s not to say that it will continue to be or that there isn’t a better method out there. A few points to consider are:</p>
+<ul>
+<li>The model uses past data to predict future results. The accuracy of this method is open to debate. Does something that happened 6 months ago with different players in different weather conditions really help us understand what will happen?</li>
+<li>In this scenario, the model is also based on last season’s information – players and managers come and go, so the Manchester United under David Moyes could be very different to the Manchester United under Louis van Gaal. Similarly, will Liverpool be as free-scoring without the talents of Luis Suarez? You may wish to wait for a few games to have been played in the new season before betting to ensure that things are in line with your expectations.</li>
+<li>The only real factor that this approach takes into account is the result. We’ve all seen plenty of games where a team dominated a match but only won 1-0. Or even the odd situation where the dominant team lost the match via a goal on the counter attack. Match results tell us the final score, but do not tell us what actually happened during the game.</li>
+<li>The model is objective, which means it does not take into account other factors. However, as we know, a lot of things can affect a game, both before and during. A model such as this does not take into account things like injuries, suspensions, fatigue or weather which could affect the predictions prior to the game. Similarly, it is believed that goal expectation is affected by factors that happen in the game, such as an away goal or a red card.</li>
+<li>It is also believed the probability of draws and the probability of zero is underestimated when using Poisson Distribution to predict football games. This can however be rectified by using a method known as zero-inflation to increase the probability of no goals.</li>
+</ul>
+<p>I hope that this has been useful and you have plenty of hours of fun with your new spreadsheet. Remember, always check and double check the figures, do your research, don’t bet what you can’t afford to lose and ask questions should your model be too dissimilar to the market as that could indicate an issue. Happy betting!</p>
+ 
+                
+            </div> 
+ 
+            <div class="sharearticle" style="margin-bottom:20px;"> 
+                <h3>Share this page:</h3> 
+ 
+                <!-- AddThis Button BEGIN --> 
+                <div class="addthis_toolbox addthis_default_style "> 
+                    <a class="addthis_button_tumblr addthis_button_preferred_1 at300b" target="_blank" title="Tumblr" href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#"><span class="at4-icon aticon-tumblr" style="background-color: rgb(56, 72, 83);"><span class="at_a11y">Share on tumblr</span></span></a> 
+                    <a class="addthis_button_facebook addthis_button_preferred_2 at300b" title="Facebook" href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a> 
+                    <a class="addthis_button_twitter addthis_button_preferred_3 at300b" title="Tweet" href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a> 
+                    <a class="addthis_button_email addthis_button_preferred_4 at300b" target="_blank" title="Email" href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#"><span class="at4-icon aticon-email" style="background-color: rgb(115, 138, 141);"><span class="at_a11y">Share on email</span></span></a> 
+ 
+                <div class="atclear"></div></div> 
+                <script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/addthis_widget.js"></script> 
+                <!-- AddThis Button END --> 
+ 
+            </div> 
+ 
+  
+
+ 
+ 
+        </div> 
+ 
+        <!-- rightside --> 
+        <div class="rightside"> 
+            <!-- rightside -->
+<div class="rightside">
+                <!-- countries covered -->
+        <div class="countries-covered only-desctop only-tablet">
+            <h3>
+                Popular Sections            </h3>
+                        <ul id="menu-popular-sections" class="menu"><li id="menu-item-6422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6422 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/usa-flag.png" class="flag"><a href="https://www.sportsbettingonline.net/country/us-sites/" style="color:">US Sites</a></li>
+<li id="menu-item-6423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6423 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/canada-flag.png" class="flag"><a href="https://www.sportsbettingonline.net/country/canada/" style="color:">Canadian Sportsbooks</a></li>
+<li id="menu-item-7384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7384 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/uk-flag.png" class="flag"><a href="https://www.sportsbettingonline.net/country/uk-bookmakers/" style="color:">UK Bookmakers</a></li>
+<li id="menu-item-6425" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6425 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/australia-flag.png" class="flag"><a href="https://www.sportsbettingonline.net/country/aussie-sites/" style="color:">Aussie Sports Betting Sites</a></li>
+<li id="menu-item-6426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6426 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/eu-flag.png" class="flag"><a href="https://www.sportsbettingonline.net/european-sites/" style="color:">European Sites</a></li>
+<li id="menu-item-6427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6427 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/asian-icon.png" class="flag"><a href="https://www.sportsbettingonline.net/asian-bookies/" style="color:">Asian Bookies</a></li>
+<li id="menu-item-9188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9188 has-image"><img src="./Poisson Distribution - Creating A Football Prediction Model_files/allcountries.png" class="flag"><a href="https://www.sportsbettingonline.net/country/" style="color:">All Countries</a></li>
+</ul>        </div>
+        <!-- countries covered -->
+    
+
+
+
+   
+            <!-- other sites -->
+        <div class="other-sites only-desctop only-tablet">
+            <div class="other-sites-inner">
+                <h3>
+                    Choose Your Sport                </h3>
+                <div class="custom-select">
+                    <a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#" class="head-select">Choose from the following</a>
+                    <ul id="menu-choose-your-sport" class="other-sites-list list-select"><li id="menu-item-7447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7447"><a href="https://www.sportsbettingonline.net/a-league/">A-League</a></li>
+<li id="menu-item-7448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7448"><a href="https://www.sportsbettingonline.net/athletics/">Athletics</a></li>
+<li id="menu-item-7449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7449"><a href="https://www.sportsbettingonline.net/cricket/australian-cricket/">Australian Cricket betting</a></li>
+<li id="menu-item-7450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7450"><a href="https://www.sportsbettingonline.net/australian-rules-football/">Australian Rules football</a></li>
+<li id="menu-item-7451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7451"><a href="https://www.sportsbettingonline.net/badminton/">Badminton Betting</a></li>
+<li id="menu-item-7452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7452"><a href="https://www.sportsbettingonline.net/baseball/">Baseball Betting</a></li>
+<li id="menu-item-7454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7454"><a href="https://www.sportsbettingonline.net/boxing/">Boxing Betting</a></li>
+<li id="menu-item-7437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7437"><a href="https://www.sportsbettingonline.net/cricket/">Cricket Betting</a></li>
+<li id="menu-item-7438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7438"><a href="https://www.sportsbettingonline.net/cycling/">Cycling Betting</a></li>
+<li id="menu-item-7439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7439"><a href="https://www.sportsbettingonline.net/darts/">Darts Betting</a></li>
+<li id="menu-item-7440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7440"><a href="https://www.sportsbettingonline.net/entertainment/">Entertainment Betting</a></li>
+<li id="menu-item-7441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7441"><a href="https://www.sportsbettingonline.net/football/">Football Betting</a></li>
+<li id="menu-item-7442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7442"><a href="https://www.sportsbettingonline.net/formula-1/">Formula 1 Betting</a></li>
+<li id="menu-item-12111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12111"><a href="https://www.sportsbettingonline.net/floorball-betting/">Floorball Betting</a></li>
+<li id="menu-item-12110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12110"><a href="https://www.sportsbettingonline.net/futsal-betting/">Futsal Betting</a></li>
+<li id="menu-item-7443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7443"><a href="https://www.sportsbettingonline.net/golf/">Golf Betting</a></li>
+<li id="menu-item-7444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7444"><a href="https://www.sportsbettingonline.net/greyhound/">Greyhound Betting</a></li>
+<li id="menu-item-12109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12109"><a href="https://www.sportsbettingonline.net/handball-betting/">Handball Betting</a></li>
+<li id="menu-item-7445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7445"><a href="https://www.sportsbettingonline.net/hockey/">Hockey Betting</a></li>
+<li id="menu-item-7446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7446"><a href="https://www.sportsbettingonline.net/horse-racing/">Horse Racing Betting</a></li>
+<li id="menu-item-7455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7455"><a href="https://www.sportsbettingonline.net/nascar/">Nascar Betting</a></li>
+<li id="menu-item-7453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7453"><a href="https://www.sportsbettingonline.net/nba-betting/">NBA Betting</a></li>
+<li id="menu-item-7456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7456"><a href="https://www.sportsbettingonline.net/nfl/">NFL Betting</a></li>
+<li id="menu-item-7457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7457"><a href="https://www.sportsbettingonline.net/politics/">Political Betting</a></li>
+<li id="menu-item-7458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7458"><a href="https://www.sportsbettingonline.net/rally-racing/">Rally Racing Betting</a></li>
+<li id="menu-item-12108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12108"><a href="https://www.sportsbettingonline.net/rink-hockey-betting/">Rink Hockey Betting</a></li>
+<li id="menu-item-7459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7459"><a href="https://www.sportsbettingonline.net/rugby/">Rugby Betting</a></li>
+<li id="menu-item-7460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7460"><a href="https://www.sportsbettingonline.net/rugby-league/">Rugby League Betting</a></li>
+<li id="menu-item-7461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7461"><a href="https://www.sportsbettingonline.net/skiing/">Skiing Betting</a></li>
+<li id="menu-item-7462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7462"><a href="https://www.sportsbettingonline.net/rugby/super-rugby/">Super 15 Rugby</a></li>
+<li id="menu-item-7463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7463"><a href="https://www.sportsbettingonline.net/swimming/">Swimming Betting</a></li>
+<li id="menu-item-7464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7464"><a href="https://www.sportsbettingonline.net/tennis/">Tennis</a></li>
+<li id="menu-item-9991" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9991"><a href="https://www.sportsbettingonline.net/ufc-and-mma/">UFC Betting</a></li>
+<li id="menu-item-7465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7465"><a href="https://www.sportsbettingonline.net/v8-supercars/">V8 Supercars</a></li>
+<li id="menu-item-7466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7466"><a href="https://www.sportsbettingonline.net/volleyball/">Volleyball Betting</a></li>
+<li id="menu-item-7467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7467"><a href="https://www.sportsbettingonline.net/water-polo/">Water Polo Betting</a></li>
+</ul>                </div>
+            </div>
+        </div>
+        <!-- /other sites -->
+    
+    <!-- login tabs -->
+    <div class="login-tabs only-desctop only-tablet">
+        <ul class="nav nav-tabs" id="loginTabs">
+            <li class="active"><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#mailing-list">Tips To Email</a></li>
+            <li><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#facebook">Facebook</a></li>
+            <li><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#twitter">Twitter</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="mailing-list">
+                <p>
+    Never miss a trick! Join over <strong>100,000</strong> other users who get our free picks before the rest! We will send you one daily email with latest picks and tips. This is 100% free!
+</p>
+<div class="login-form">
+<form method="post" class="af-form-wrapper" action="https://www.aweber.com/scripts/addlead.pl">
+<div style="display: none;">
+<input type="hidden" name="meta_web_form_id" value="307090876">
+<input type="hidden" name="meta_split_id" value="">
+<input type="hidden" name="listname" value="sbo-nonus">
+<input type="hidden" name="redirect" value="http://www.aweber.com/thankyou-coi.htm?m=text" id="redirect_6a0470bf0e2a7068e503c0f5e89e7990">
+
+<input type="hidden" name="meta_adtracking" value="My_Web_Form_2">
+<input type="hidden" name="meta_message" value="1">
+<input type="hidden" name="meta_required" value="name,email">
+
+            <input type="hidden" name="meta_tooltip" value="">
+
+            <input type="hidden" name="custom Subscriber Country" value="FR">
+        </div>
+        <input type="text" name="name" class="text" value="" placeholder="Your name">
+        <input type="text" name="email" value="" placeholder="Email address">
+        <input name="submit" class="btn" type="submit" value="Submit">
+    </form>
+</div>            </div>
+
+            <div class="tab-pane" id="facebook">
+                
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Poisson Distribution - Creating A Football Prediction Model_files/rFG58m7xAig.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb8d883dc" frameborder="0" allowtransparency="true" scrolling="no" src="./Poisson Distribution - Creating A Football Prediction Model_files/ping.html" style="display: none;"></iframe></div></div></div>
+<div id="vis">
+  <div class="updated" style="height: 50px;">
+
+        <div style="margin: 14px;">
+
+            <div style="float: left;">You are not logged in to Facebook.</div>
+
+            <a href="https://www.facebook.com/SportsBettingOnline.net" style="margin: -3px 0 0 20px; float: left; width: 66px; height: 22px; background-image: url(https://www.sportsbettingonline.net/wp-content/themes/sports_betting_online/images/fb_button.png)"></a>
+
+        </div>
+
+    </div>
+</div>
+<script>
+	window.fbAsyncInit = function(){
+		FB.init({ appId:'175062796022682', status:true,  cookie:true, xfbml:true});
+		FB.getLoginStatus(function(response){
+			if (response.status != "unknown")
+			{
+				document.getElementById('vis').style.display = "none";
+			}else{
+				
+				
+			}
+		});
+	};
+	// Load the SDK Asynchronously
+	(function(d){
+		var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+		js = d.createElement('script'); js.id = id; js.async = true;
+		js.src = "//connect.facebook.net/en_US/all.js";
+		d.getElementsByTagName('head')[0].appendChild(js);
+	}(document));
+</script>
+<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/SportsBettingOnline.net" data-width="255" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=175062796022682&amp;color_scheme=light&amp;container_width=0&amp;header=true&amp;href=https%3A%2F%2Fwww.facebook.com%2FSportsBettingOnline.net&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=true&amp;width=255"><span style="vertical-align: bottom; width: 255px; height: 571px;"><iframe name="f2d5508ea8" width="255px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./Poisson Distribution - Creating A Football Prediction Model_files/like_box.html" class="" style="border: none; visibility: visible; width: 255px; height: 571px;"></iframe></span></div>            </div>
+
+            <div class="tab-pane" id="twitter">
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" allowfullscreen="" title="Twitter Timeline" height="600" style="border: none; max-width: 100%; min-width: 180px; margin: 0px; padding: 0px; display: inline-block; position: static; visibility: visible; width: 275px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>            </div>
+        </div>
+    </div>
+    <!-- /login tabs -->
+
+    <!-- news tabs -->
+    <div class="news-tabs only-desctop only-tablet">
+        <ul class="nav nav-tabs" id="newsTabs">
+            <li class="active"><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#latest">Latest</a></li>
+            <li><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#popular">Popular</a></li>
+            <li><a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#random">Random</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="latest">
+                <ul>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/nba-picks/nba-parlay-picks-for-saturday-march-7th-2015/">
+                                NBA Parlay Picks for Saturday,...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/football-tips/anfield-not-happy-hunting-ground-for-blackburn-this-time/">
+                                Anfield not happy hunting grou...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/long-shot-bets/promoted-shonan-overpriced-to-upset-urawa/">
+                                Promoted Shonan overpriced to ...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/sbo-weekly/rugby-world-cup-2015-betting-guide/">
+                                Rugby World Cup 2015 Betting G...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/football-tips/black-cats-unlucky-for-gus-poyet/">
+                                Black Cats Unlucky for Gus Poy...                            </a>
+                        </li>
+                                    </ul>
+            </div>
+
+            <div class="tab-pane" id="popular">
+                
+<!-- WordPress Popular Posts Plugin v3.2.1 [PHP] [daily] [views] [custom] -->
+
+<ul class="wpp-list">
+<li><a href="https://www.sportsbettingonline.net/long-shot-bets/promoted-shonan-overpriced-to-upset-urawa/" title="Promoted Shonan overpriced to upset Urawa" target="_self"></a> <a href="https://www.sportsbettingonline.net/long-shot-bets/promoted-shonan-overpriced-to-upset-urawa/" title="Promoted Shonan overpriced to upset Urawa" class="wpp-post-title" target="_self">Promoted Shonan overpriced to ...</a> <span class="wpp-views">44 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/football-tips/augsburg-vulnerable-against-high-scoring-wolfsburg/" title="Augsburg vulnerable against high-scoring Wolfsburg" target="_self"></a> <a href="https://www.sportsbettingonline.net/football-tips/augsburg-vulnerable-against-high-scoring-wolfsburg/" title="Augsburg vulnerable against high-scoring Wolfsburg" class="wpp-post-title" target="_self">Augsburg vulnerable against hi...</a> <span class="wpp-views">23 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/football-tips/anfield-not-happy-hunting-ground-for-blackburn-this-time/" title="Anfield not happy hunting ground for Blackburn this time" target="_self"></a> <a href="https://www.sportsbettingonline.net/football-tips/anfield-not-happy-hunting-ground-for-blackburn-this-time/" title="Anfield not happy hunting ground for Blackburn this time" class="wpp-post-title" target="_self">Anfield not happy hunting grou...</a> <span class="wpp-views">23 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/id/taruhan-online-di-indonesia/" title="Taruhan Online di Indonesia" target="_self"></a> <a href="https://www.sportsbettingonline.net/id/taruhan-online-di-indonesia/" title="Taruhan Online di Indonesia" class="wpp-post-title" target="_self">Taruhan Online di Indonesia</a> <span class="wpp-views">17 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/football-tips/black-cats-unlucky-for-gus-poyet/" title="Black Cats Unlucky for Gus Poyet" target="_self"></a> <a href="https://www.sportsbettingonline.net/football-tips/black-cats-unlucky-for-gus-poyet/" title="Black Cats Unlucky for Gus Poyet" class="wpp-post-title" target="_self">Black Cats Unlucky for Gus Poy...</a> <span class="wpp-views">16 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/ko/%ed%95%9c%ea%b5%ad%ec%97%90%ec%84%9c-%ec%98%a8%eb%9d%bc%ec%9d%b8-%eb%b2%a0%ed%8c%85%ed%95%98%ea%b8%b0/" title="한국에서 온라인 베팅하기" target="_self"></a> <a href="https://www.sportsbettingonline.net/ko/%ed%95%9c%ea%b5%ad%ec%97%90%ec%84%9c-%ec%98%a8%eb%9d%bc%ec%9d%b8-%eb%b2%a0%ed%8c%85%ed%95%98%ea%b8%b0/" title="한국에서 온라인 베팅하기" class="wpp-post-title" target="_self">한국에서 온라인 베팅하기...</a> <span class="wpp-views">15 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/vi/lam-the-nao-de-ca-do-truc-tuyen-tai-viet-nam/" title="Làm Thế Nào Để Cá Độ Trực Tuyến Tại Việt Nam" target="_self"></a> <a href="https://www.sportsbettingonline.net/vi/lam-the-nao-de-ca-do-truc-tuyen-tai-viet-nam/" title="Làm Thế Nào Để Cá Độ Trực Tuyến Tại Việt Nam" class="wpp-post-title" target="_self">Làm Thế Nào Để Cá Độ Trực Tuyế...</a> <span class="wpp-views">14 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/football-tips/bilbao-to-suffer-at-the-hands-of-another-big-bully/" title="Bilbao to suffer at the hands of another big bully" target="_self"></a> <a href="https://www.sportsbettingonline.net/football-tips/bilbao-to-suffer-at-the-hands-of-another-big-bully/" title="Bilbao to suffer at the hands of another big bully" class="wpp-post-title" target="_self">Bilbao to suffer at the hands ...</a> <span class="wpp-views">12 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/sbo-weekly/tigers-to-roar-past-seven-and-a-half-wins/" title="Tigers to roar past seven and a half wins" target="_self"></a> <a href="https://www.sportsbettingonline.net/sbo-weekly/tigers-to-roar-past-seven-and-a-half-wins/" title="Tigers to roar past seven and a half wins" class="wpp-post-title" target="_self">Tigers to roar past seven and ...</a> <span class="wpp-views">11 views</span></li>
+<li><a href="https://www.sportsbettingonline.net/football-tips/samp-to-ramp-up-its-uefa-qualification-push/" title="Samp to ramp up its UEFA qualification push" target="_self"></a> <a href="https://www.sportsbettingonline.net/football-tips/samp-to-ramp-up-its-uefa-qualification-push/" title="Samp to ramp up its UEFA qualification push" class="wpp-post-title" target="_self">Samp to ramp up its UEFA quali...</a> <span class="wpp-views">8 views</span></li>
+
+</ul>
+
+<!-- End WordPress Popular Posts Plugin v3.2.1 -->
+            </div>
+
+            <div class="tab-pane" id="random">
+                <ul>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/fr/belgique/">
+                                Belgique                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/nfl-picks/nfl-week-12-teaser-best-bets-odds/">
+                                NFL Week 12 Teaser Best Bets &amp;...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/blog/allardyce-proves-old-dogs-can-learn-new-tricks/">
+                                Allardyce Proves Old Dogs Can ...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/football-tips/barnet-false-championship-favourite/">
+                                Barnet is a false championship...                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.sportsbettingonline.net/football-tips/get-stuck-inter-teams-score-san-siro/">
+                                Get stuck Inter both teams to ...                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /news tabs -->
+
+    <!-- expert analysis -->
+        <!-- /expert analysis -->
+
+            <!-- other sites -->
+        <div class="other-sites only-mobile">
+            <div class="other-sites-inner">
+                <h3>
+                    Choose Your Sport                </h3>
+                <div class="custom-select">
+                    <a href="https://www.sportsbettingonline.net/strategy/football-prediction-model-poisson-distribution/#" class="head-select">Choose from the following</a>
+                    <ul id="menu-choose-your-sport-1" class="other-sites-list list-select"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7447"><a href="https://www.sportsbettingonline.net/a-league/">A-League</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7448"><a href="https://www.sportsbettingonline.net/athletics/">Athletics</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7449"><a href="https://www.sportsbettingonline.net/cricket/australian-cricket/">Australian Cricket betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7450"><a href="https://www.sportsbettingonline.net/australian-rules-football/">Australian Rules football</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7451"><a href="https://www.sportsbettingonline.net/badminton/">Badminton Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7452"><a href="https://www.sportsbettingonline.net/baseball/">Baseball Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7454"><a href="https://www.sportsbettingonline.net/boxing/">Boxing Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7437"><a href="https://www.sportsbettingonline.net/cricket/">Cricket Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7438"><a href="https://www.sportsbettingonline.net/cycling/">Cycling Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7439"><a href="https://www.sportsbettingonline.net/darts/">Darts Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7440"><a href="https://www.sportsbettingonline.net/entertainment/">Entertainment Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7441"><a href="https://www.sportsbettingonline.net/football/">Football Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7442"><a href="https://www.sportsbettingonline.net/formula-1/">Formula 1 Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12111"><a href="https://www.sportsbettingonline.net/floorball-betting/">Floorball Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12110"><a href="https://www.sportsbettingonline.net/futsal-betting/">Futsal Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7443"><a href="https://www.sportsbettingonline.net/golf/">Golf Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7444"><a href="https://www.sportsbettingonline.net/greyhound/">Greyhound Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12109"><a href="https://www.sportsbettingonline.net/handball-betting/">Handball Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7445"><a href="https://www.sportsbettingonline.net/hockey/">Hockey Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7446"><a href="https://www.sportsbettingonline.net/horse-racing/">Horse Racing Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7455"><a href="https://www.sportsbettingonline.net/nascar/">Nascar Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7453"><a href="https://www.sportsbettingonline.net/nba-betting/">NBA Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7456"><a href="https://www.sportsbettingonline.net/nfl/">NFL Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7457"><a href="https://www.sportsbettingonline.net/politics/">Political Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7458"><a href="https://www.sportsbettingonline.net/rally-racing/">Rally Racing Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12108"><a href="https://www.sportsbettingonline.net/rink-hockey-betting/">Rink Hockey Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7459"><a href="https://www.sportsbettingonline.net/rugby/">Rugby Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7460"><a href="https://www.sportsbettingonline.net/rugby-league/">Rugby League Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7461"><a href="https://www.sportsbettingonline.net/skiing/">Skiing Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7462"><a href="https://www.sportsbettingonline.net/rugby/super-rugby/">Super 15 Rugby</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7463"><a href="https://www.sportsbettingonline.net/swimming/">Swimming Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7464"><a href="https://www.sportsbettingonline.net/tennis/">Tennis</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9991"><a href="https://www.sportsbettingonline.net/ufc-and-mma/">UFC Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7465"><a href="https://www.sportsbettingonline.net/v8-supercars/">V8 Supercars</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7466"><a href="https://www.sportsbettingonline.net/volleyball/">Volleyball Betting</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7467"><a href="https://www.sportsbettingonline.net/water-polo/">Water Polo Betting</a></li>
+</ul>                </div>
+            </div>
+        </div>
+        <!-- /other sites -->
+    
+</div>
+<!-- /rightside -->
+ 
+        </div> 
+        <!-- /rightside --> 
+ 
+        <div class="clearblock"> 
+        </div> 
+    </div> 
+ 
+ 
+<div class="clearblock"></div>
+
+<div class="footer">
+    <h2>More From SportsBettingOnline.net</h2>
+
+    <div class="copyright">
+        Copyright © SportsBettingOnline.net - Copyright © 2011-15 All Rights Reserved.
+    </div>
+
+    <div class="clearblock"></div>
+
+    <div class="footer-nav">
+                    <ul id="menu-footer-menu-first" class="menu"><li id="menu-item-8498" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8498"><a href="https://www.sportsbettingonline.net/">Home</a></li>
+<li id="menu-item-8499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8499"><a href="https://www.sportsbettingonline.net/country/">Betting In Your Country</a></li>
+<li id="menu-item-8500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8500"><a href="https://www.sportsbettingonline.net/live/">Live Betting</a></li>
+<li id="menu-item-8501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8501"><a href="https://www.sportsbettingonline.net/scam-sportsbooks/">Blacklist of Sportsbooks</a></li>
+<li id="menu-item-13350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13350"><a href="https://www.sportsbettingonline.net/daily-fantasy-sports/">Daily Fantasy Sports</a></li>
+</ul>                            <ul id="menu-footer-menu-second" class="menu"><li id="menu-item-8489" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-8489"><a href="https://www.sportsbettingonline.net/strategy/">Strategy</a></li>
+<li id="menu-item-8490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8490"><a href="https://www.sportsbettingonline.net/nfl/">NFL Betting</a></li>
+<li id="menu-item-10977" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10977"><a href="https://www.sportsbettingonline.net/football/">Football Betting</a></li>
+<li id="menu-item-8492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8492"><a href="https://www.sportsbettingonline.net/nba-betting/">NBA Betting</a></li>
+<li id="menu-item-8493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8493"><a href="https://www.sportsbettingonline.net/horse-racing/">Horse Racing Betting</a></li>
+</ul>                            <ul id="menu-footer-menu-third" class="menu"><li id="menu-item-13482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13482"><a href="https://www.sportsbettingonline.net/contact/">Contact Us</a></li>
+<li id="menu-item-8494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8494"><a href="https://www.sportsbettingonline.net/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-8495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8495"><a href="https://www.sportsbettingonline.net/terms-and-conditions/">Terms and Conditions</a></li>
+<li id="menu-item-8496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8496"><a href="https://www.sportsbettingonline.net/disclaimer/">Disclaimer</a></li>
+<li id="menu-item-8497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8497"><a href="https://www.sportsbettingonline.net/sitemap/">Sitemap</a></li>
+</ul>            </div>
+</div>
+</div>
+</div>
+
+<script>
+    $(function () {
+        $('#loginTabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+
+        $('#newsTabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    })
+</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			if(!catapultReadCookie("catAccCookies")){//If the cookie has not been set
+				jQuery("#catapult-cookie-bar").show();
+							}
+		});
+	</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mrp_frontend_data = {"ajax_url":"https:\/\/www.sportsbettingonline.net\/wp-admin\/admin-ajax.php","ajax_nonce":"736c89e60f","icon_classes":"{\"star_full\":\"fa fa-star mrp-star-full\",\"star_half\":\"fa fa-star-half-o mrp-star-half\",\"star_empty\":\"fa fa-star-o mrp-star-empty\",\"minus\":\"fa fa-minus-circle mrp-minus\",\"thumbs_up_on\":\"fa fa-thumbs-up mrp-thumbs-up-on\",\"thumbs_up_off\":\"fa fa-thumbs-o-up mrp-thumbs-up-off\",\"thumbs_down_on\":\"fa fa-thumbs-down mrp-thumbs-down-on\",\"thumbs_down_off\":\"fa fa-thumbs-o-down mrp-thumbs-down-off\",\"spinner\":\"fa fa-spinner fa-spin mrp-spinner\"}","use_custom_star_images":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/frontend.js"></script>
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/uk-cookie-consent-js.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/www.sportsbettingonline.net\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/polls-js.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ratingsL10n = {"plugin_url":"https:\/\/www.sportsbettingonline.net\/wp-content\/plugins\/wp-postratings","ajax_url":"https:\/\/www.sportsbettingonline.net\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 post at a time.","image":"stars_crystal","image_ext":"gif","max":"5","show_loading":"0","show_fading":"0","custom":"0"};
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_over."+ratingsL10n.image_ext;;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/postratings-js.js"></script>
+	<!-- Clicky Web Analytics - http://clicky.com, WordPress Plugin by Yoast - https://yoast.com/wordpress/plugins/clicky/ -->
+			<script type="text/javascript">
+			function clicky_gc(name) {
+				var ca = document.cookie.split(';');
+				for (var i in ca) {
+					if (ca[i].indexOf(name + '=') != -1) {
+						return decodeURIComponent(ca[i].split('=')[1]);
+					}
+				}
+				return '';
+			}
+			var username_check = clicky_gc('comment_author_eb0895764957fe9b4c69abe3543c4154');
+			if (username_check) var clicky_custom_session = {username: username_check};
+		</script>
+		<script type="text/javascript">
+			var clicky_custom = clicky_custom || {}; clicky_custom.outbound_pattern = ['/content/'];
+		var clicky = { log : function () { return true;	}, goal: function () { return true;	} };
+		var clicky_site_id = 100567663;
+		(function () {
+			var s = document.createElement('script');s.type = 'text/javascript';s.async = true;s.src = '//static.getclicky.com/js';
+			( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild(s);
+		})();
+	</script>
+	<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100567663ns.gif" /&gt;&lt;/p&gt;</noscript>
+	<div id="catapult-cookie-bar" style="display: block;">We here at SportsBettingOnline.net use cookies. These cookies are used with the intention of improving your user experience.<button id="catapultCookie" tabindex="1" onclick="catapultAcceptCookies();">Yes, That's Okay</button><a tabindex="1" href="https://www.sportsbettingonline.net/privacy-policy/">Please tell me more</a></div>
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0023/4921.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+<!-- ClickTale Bottom part -->
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type="text/javascript">
+if(document.location.protocol != 'https:') document.write(unescape("%3Cscript%20src='" +'http://cdn.clicktale.net/www/' + "WRe15.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+if(typeof ClickTale=='function')  ClickTale(9007, 0.05, "www09");
+</script>
+<!-- ClickTale end of Bottom part -->
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(100567663);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100642772ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+</style="><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe id="_atssh353" title="AddThis utility frame" src="./Poisson Distribution - Creating A Football Prediction Model_files/sh200.html" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;"></iframe></div><script type="text/javascript" src="./Poisson Distribution - Creating A Football Prediction Model_files/core201.js"></script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" style="display: none;"></iframe></body><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style></html>

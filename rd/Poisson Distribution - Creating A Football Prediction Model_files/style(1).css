@@ -1,0 +1,249 @@
+/*
+
+Theme Name: Sports Betting Online
+
+*/
+
+
+
+a.btn-b-yellow {
+
+background: #e8c90f;
+
+background: -moz-linear-gradient(top, #e8c90f 0%, #eaab30 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8c90f), color-stop(100%,#eaab30));
+
+background: -webkit-linear-gradient(top, #e8c90f 0%,#eaab30 100%);
+
+background: -o-linear-gradient(top, #e8c90f 0%,#eaab30 100%);
+
+background: -ms-linear-gradient(top, #e8c90f 0%,#eaab30 100%);
+
+background: linear-gradient(to bottom, #e8c90f 0%,#eaab30 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8c90f', endColorstr='#eaab30',GradientType=0 );
+
+display: block;
+
+height: 31px;
+
+line-height: 31px;
+
+
+
+margin-top: 7px;
+
+border-radius: 3px;
+
+color: #fff;
+
+text-align: center;
+
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 15px;
+
+text-transform: uppercase;
+
+text-decoration: none;
+
+font-weight: bold;
+
+text-shadow: 0px -1px 1px rgba(0,0,0,.2);
+
+}
+
+
+
+/*Inner Data Table CSS
+
+*/
+
+
+
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #E9C118; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #E9C118), color-stop(1, #E9C118) );background:-moz-linear-gradient( center top, #E9C118 5%, #E9C118 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9C118', endColorstr='#E9C118');background-color:#E9C118; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #E9C118; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #7F4614; border-left: 1px solid #D9CFB8;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #F0E5CC; color: #7F4614; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }
+
+
+
+/*pages-posting -- Ronmarlacamiento*/
+
+.mainblock .only-desctop.only-mobile {
+
+display:none;
+
+}
+
+
+
+.rightside .news-tabs .tab-content .wpp-list .wpp-views  {
+
+display:none;
+
+}
+
+
+
+/* General Table Style */
+
+   table.responsivetable {
+
+   width: 100%;
+
+   border-collapse: collapse;
+
+   }
+
+   .responsivetable tr:nth-of-type(odd) {
+
+   background-color: #eee;
+
+   }
+
+   .responsivetable thead tr td {
+
+   background-color: #333;
+
+   color: white;
+
+   font-weight: bold;
+
+   }
+
+   .responsivetable td, .responsivetable th {
+
+   padding: 6px;
+
+   border: 1px solid #ccc;
+
+   text-align: left;
+
+   }
+
+
+
+   .responsivetable th {
+
+
+
+    background: url(https://www.sportsbettingonline.net/wp-content/uploads/2014/07/table-header-bg.png);
+
+    color:#FEFEFE; 
+
+   }
+
+
+
+   /* Make Table Responsive --- */
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+.responsivetable table, .responsivetable thead, .responsivetable th, .responsivetable tr, .responsivetable td {
+
+display: block;
+
+}
+
+/* Hide table headers (but not display:none, for accessibility) */
+
+.responsivetable thead tr {
+
+position: absolute;
+
+top: -9999px;
+
+left: -9999px;
+
+}
+
+.responsivetable tr {
+
+border: 1px solid #ccc;
+
+}
+
+.responsivetable td {
+
+/* Behave like a row */
+
+border: none;
+
+padding-left: 60%;
+
+border-bottom: 1px solid #eee;
+
+position: relative;
+
+}
+
+.responsivetable td:before {
+
+/* Now, like a table header */
+
+position: absolute;
+
+/* Top / left values mimic padding */
+
+top: 6px; left: 6px;
+
+width: 30%;
+
+padding-right: 5px;
+
+white-space: nowrap;
+
+}
+
+/* -- LABEL THE DATA -- */
+
+.responsivetable td:nth-of-type(1):before { content: "Team and Projected Wins"; }
+
+.responsivetable td:nth-of-type(2):before { content: "Odds"; }
+
+ 
+
+}/* End responsive query */
+
+
+
+.inside.article ol {
+
+margin: 20px;
+
+color: #676767;
+
+}
+
+.mainblock .article ol li {
+margin-bottom:14px;
+}
+
+.mainblock .article ol li {
+margin-left:13px;
+}
+
+.gform_footer input[type="submit"]{
+background: #385f80;
+background: -moz-linear-gradient(top, #385f80 0%, #163253 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#385f80), color-stop(100%,#163253));
+background: -webkit-linear-gradient(top, #385f80 0%,#163253 100%);
+background: -o-linear-gradient(top, #385f80 0%,#163253 100%);
+background: -ms-linear-gradient(top, #385f80 0%,#163253 100%);
+background: linear-gradient(to bottom, #385f80 0%,#163253 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#385f80', endColorstr='#163253',GradientType=0);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+text-transform: uppercase;
+color: #fff;
+text-decoration: none;
+border: none;
+height: 31px;
+width: 110px;
+text-align: center;
+line-height: 31px;
+border-radius: 4px;
+cursor: pointer;
+display: block;
+
+}

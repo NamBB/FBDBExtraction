@@ -1,0 +1,559 @@
+@charset "utf-8";@media (min-width:760px) and (max-width:975px){.wrapper{width:768px;}
+body{margin:0;}
+.topmenu > ul > li > a{padding:0 17px;}
+.topmenu li:last-child{padding-right:0;}
+.topmenu > ul > li:last-child > a{padding:0 16px 0 15px;}
+.top-bg{background:url(../images/header-bg-tablet.jpg) no-repeat top center;}
+.logo{text-align:center;float:none;}
+.slider .bx-wrapper{width:710px !important;}
+#news-slider li img{width:710px !important;max-width:710px;}
+#news-slider li .slide-caption{width:676px;}
+#slider-pager{display:none;}
+.hot-topics ul{width:500px;}
+.mainblock{width:429px;}
+.article .top-10-sites > h2{font-size:18px;}
+.top-10-sites .line .desc{display:none;}
+.top-10-sites .line .button-review a{width:80px;overflow:hidden;}
+.top-10-sites .line .mobile{display:block;}
+.top-10-sites .line .desctop{display:none;}
+.top-10-sites .line .button-visit a{width:80px;}
+.footer-nav ul{width:225px;}
+.main-banner img{width:100px;height:22px;}
+.main-banner-wrapper{padding-right:20px;background-image:none !important;}
+.main-banner-wrapper.insidereview{background-image:none !important;}
+.only-desctop{display:none;}
+.only-tablet{display:block;}
+.only-desctop.only-tablet{display:block}
+.only-desctop.only-mobile{display:none;}
+.only-mobile{display:none;}
+.only-tablet{display:block;}
+.sharearticle img{margin-bottom:10px;}
+.relarticle-description{}
+.relarticle-description h3{margin-top:0;}
+.rating-box{margin-left:10px;}
+.subscribe-form-wrapper{background-image:none;}
+.subscribe-form-wrapper .subscribe-form{float:none;margin:0 auto;}
+.article ul.top-bonuses {
+width: 424px;
+margin-left: 47px;
+}
+.odds-display h3 {
+
+margin-bottom: -6px;
+float: none;
+height: 33px;
+width: 183px;
+text-align: center;
+background: #193958;
+line-height: 34px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 5px;
+
+}
+div.odds_select {
+text-align: left;
+height: 39px;
+margin-left: 5px;
+}
+.cv{
+margin-right:15px !important;
+}
+.blog-post-part .image img.fe-image {
+width: 409px;
+height: 190px;
+}
+.blog-post-part .image {
+width: 409px;
+height: 190px;
+}
+.blog-post-part .date-title-share-tag-part .date-part {
+width: 70px;
+height: 70px;
+margin-right: 10px;
+}
+.blog-post-part .date-title-share-tag-part .date-part .date-part-inner {
+width: 50px;
+height: 50px;
+font-size: 14px;
+}
+.blog-post-part .date-title-share-tag-part .date-part .date-part-inner p.moth{
+margin-top:-2px !important;
+}
+.blog-post-part .date-title-share-tag-part .title-tag-share-part {
+float: left;
+width: 264px;
+padding-top: 4px;
+}
+.title-tag-share-part .tags {
+margin-top: 10px;
+margin-bottom: 10px;
+width: 302px;
+height: auto;
+}
+.blog-post-part .date-title-share-tag-part {
+padding: 8px;
+}
+
+.promo-area-part .top-promo-text-part {
+width: 768px;
+line-height: 49px;
+}
+.promo-area-part .top-promo-text-part p.top-text {
+font-size: 22px;
+}
+.promo-area-part .recommended-part {
+width: 390px;
+}
+.promo-area-part .recommended-part p.recommedned-text {
+font-size: 21px;
+font-family: 'GraduateRegular';
+}
+.wrapper-promo {
+width: 768px;
+margin: 0 auto;
+}
+.promo-area-part .right-background-image {
+
+margin-top: -7px;
+margin-right: 0px;
+}
+
+.promo-area-part .top-recommedned-sites-part .row .logo {
+width: 171px;
+height: auto;
+float: left;
+}
+.promo-area-part .top-recommedned-sites-part .row .rank {
+font-size: 21px;
+}
+
+/*-----------------*/
+.main-banner-wrapper-bonuses .logo-container img {
+margin-left: 252px;
+width: 173px;
+height: 47px;
+}
+.main-banner-wrapper-bonuses .background-image-container {
+width: 274px;
+height: 150px;
+float: left;
+margin-top: 4px;
+margin-left: 71px;
+}
+.main-banner-wrapper-bonuses {
+background:white;
+height: 351px;
+}
+.main-banner-wrapper-bonuses .description {
+width: 382px;
+}
+.main-banner-wrapper-bonuses .description {
+margin-left: 18px;
+}
+.main-banner-wrapper-bonuses .description p.bet-now {
+margin-left: 88px;
+}
+.main-banner-wrapper-bonuses .description p {
+line-height: 18px;
+}
+.responsive{
+width: 672px !important;
+}
+.footer-nav-info ul {
+float: left;
+width: 470px;
+margin-left: 121px;
+text-align: center;
+}
+}
+@media (max-width:759px){.wrapper{width:320px;}
+.odds-display h3 {
+
+margin-bottom: -6px;
+float: none;
+height: 36px;
+width: 184px;
+text-align: center;
+background: #193958;
+line-height: 34px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 5px;
+
+}
+div.odds_select {
+text-align: left;
+height: 39px;
+margin-left: 5px;
+}
+.odds_select li {
+list-style: none;
+float: left;
+margin-bottom: -3px;
+margin-right: 0px;
+line-height: 24px;
+}
+div.odds_select {
+text-align: left;
+height: 98px;
+margin-left: 5px;
+}
+.odds_calc .form .left {
+width: 71px;
+}
+.odds_calc .form .formfield {
+width: 149px;
+}
+.odds_calc .form .right input {
+height: 32px;
+}
+.cv{
+margin-right:15px !important;
+}
+.only-desctop{display:none;}
+.only-tablet{display:none;}
+.only-mobile{display:block;}
+.only-desctop.only-tablet{display:none;}
+.topheader{height:121px;padding-bottom:0;}
+.top-bg{background:url(../images/topbg-mobile.jpg) no-repeat top center;}
+.logo{margin-left: 72px;margin-top:10px;}
+.logo img{width:180px;height:87px;}
+.logo img.mobile{width:auto;height:auto;}
+.topmenu{background:url(../images/topmenu-li.png) repeat-x;height:50px;background-size:100%;position:relative;}
+.topmenu ul{padding:41px 10px 9px;}
+.topmenu li{float:none;z-index:99999;padding-right:0;display:none;}
+.topmenu li:hover > a{color:#fff;background:#203958;}
+.topmenu ul li.current{display:block;position:absolute;top:6px;width:298px;}
+.topmenu ul li.current a{border:1px solid #fff;background:#203958 url('../images/arrow-down.png') no-repeat 95% center;}
+.topmenu ul li.active > a{color:#ccc;}
+.topmenu > ul > li > a{height:33px;line-height:33px;background:#203958;}
+.topmenu li ul{display:block;position:static;width:275px;background:#203958;padding:0px;width:auto;}
+.topmenu li ul li{background:none;margin:0;width:auto;}
+.topmenu li ul li a{color:#fff;font-family:'helveticaneue';font-weight:bold;font-size:13px;text-transform:uppercase;display:block;padding:0 30px;text-decoration:none;height:auto;line-height:1.3;padding-bottom:10px;}
+.content{padding:10px 10px 40px;}
+.mainblock{width:300px;overflow:hidden;}
+#slider-pager{display:none;}
+.bx-wrapper .bx-controls-direction a{display:none;}
+#news-slider li .slide-caption{padding:17px 14px;left:145px;width:127px;}
+#news-slider li .slide-caption .caption-right a{margin-top:15px;}
+#news-slider li .slide-caption .caption-left p{display:none;}
+#news-slider li .slide-caption .caption-left{width:141px;}
+.bx-wrapper img{height:130px;}
+.slider{margin:0px 0 15px;background:#f6f6f6;padding:0px;height:125px;}
+#news-slider li .slide-caption h3{font-size:17px;margin-bottom:0px;}
+.hot-topics-link{width:103px;font-size:12px;}
+.hot-topics{margin-bottom:10px;}
+.hot-topics ul li{display:none;}
+.hot-topics ul li:first-child{display:block;margin-left:12px;width:185px;}
+.countries-covered{padding:0;}
+.main-banner{padding:0;}
+.main-banner-wrapper{padding-right:10px;padding-bottom:18px;background-image:none !important;}
+.main-banner-wrapper h2 img{margin-left:15px;width:110px;height:20px;}
+.main-banner-wrapper.insidereview .bet-now .btn-yellow{width:262px;font-size:14px;}
+.main-banner-wrapper.insidereview ul li{font-size:14px;}
+.top-10-sites{padding:0;}
+.article .top-10-sites > h2{font-size:15px;}
+.top-10-sites .line .logo{display:none;}
+.top-10-sites .line .desc{display:none;}
+.top-10-sites .line .desctop{display:none;}
+.top-10-sites .line .mobile{display:block;}
+.top-10-sites .line .button-review{margin-left:35px;}
+.top-10-sites .line .button-review a{width:68px;}
+.top-10-sites .line .button-visit{margin-left:8px;}
+.top-10-sites .line .button-visit a{width:58px;}
+.map{display:none;}
+.rightside{margin-top:0;width:300px;}
+.footer{overflow:hidden;}
+.breadcrumbs{display:none;}
+.social{display:none;}
+.content.inside-article .article{display:block;padding-right:0;}
+.mainblock{margin-top:0;}
+.main-banner img{max-width:100%;}
+.article h2{font-size:18px;}
+.article h3{font-size:14px;}
+.sharearticle img{margin-bottom:10px;}
+.related-articles{margin-top:20px;}
+.relarticle-img{width:75px;height:75px;overflow:hidden;}
+.related-article-body{padding-left:10px;padding-right:15px;}
+.relarticle-description{margin-left:2px;}
+.relarticle-description h3{font-size: 12px;
+margin-top: 0;
+margin-bottom: 8px;}
+.relarticle-description p:not(.readmore){display:none;}
+.ratingWrapper h3{width:103px;font-size:12px;margin-bottom:10px;}
+.rating-box{background:url('../images/ratingStarsSmall.png') repeat-x 0 0;width:138px;height:23px;margin-left:9px;}
+.rating{background:url('../images/ratingStarsSmall.png') repeat-x 0 100%;height:23px;}
+.ratingDesc{margin-left:6px;}
+.galleryTextThumbs .rsOverflow, .royalSlider.galleryTextThumbs{height:123px !important;display:none;}
+.sboSkin .rsContent .slide-caption h3{line-height:1;font-size:17px;}
+body{margin:0;}
+.topmenu > ul > li:last-child > ul:after,
+.topmenu > ul > li:nth-child(4) > ul:after{display:none;}
+.subscribe-form-wrapper{background-image:none;}
+.subscribe-form-wrapper .subscribe-form{float:none;margin:0 auto;width:280px;}
+.subscribe-form-wrapper .subscribe-form input[type="text"]{width:147px;}
+.wrap404{margin:0 auto 50px auto;width:96%;height:357px;background-position:center center;text-align:center;padding:90px 2% 0 2%;}
+.page404 h1{color:#7f7f7f;text-transform:uppercase;font-size:70px;margin-bottom:20px;line-height:.8em;}
+.page404{background:#fff;margin:0!important;padding:0;}
+.countryitem{width:46%;padding:0 1.8%;}
+.articleimg{width:100%;height:200px;margin:0 15px 0 0;float:none;}
+.articleexcerpt{font-size:14px;}
+.articleexcerpt a.rmorey{display:block;margin:0 auto;width:170px;padding:10px 15px;font-size:13px !important;}
+.clearauthor{clear:none;}
+.articleauthor .authoinfo{padding-left:0;min-height:110px;}
+.artthumb{float:left;margin:0 10px 5px 0;position:inherit;}
+h4.authorname{float:none;}
+ul.socialicons{float:none;}
+.artthumb2{position:relative;display:block;margin:0 auto 10px auto;left:80px;}
+h4.authorname2{text-align:center;float:none;}
+ul.socialicons2{float:none;text-align:center;}
+.articleauthor .authoinfo2{padding-left:0;}
+.article ul.top-bonuses {
+width: 320px;
+margin-left: 0px;
+}
+
+.blog-post-part .image img.fe-image {
+width: 310px;
+height: 138px;
+}
+.blog-post-part .image {
+width: 310px;
+height: 138px;
+}
+.blog-post-part .date-title-share-tag-part .date-part {
+width: 60px;
+height: 60px;
+margin-right: 8px;
+}
+.blog-post-part .date-title-share-tag-part .date-part .date-part-inner {
+width: 40px;
+height: 40px;
+font-size: 12px;
+}
+.blog-post-part .date-title-share-tag-part .date-part .date-part-inner p.moth{
+margin-top:-7px !important;
+}
+.blog-post-part .date-title-share-tag-part .title-tag-share-part {
+float: left;
+width: 193px;
+padding-top: 4px;
+}
+.title-tag-share-part .tags {
+margin-top: 10px;
+margin-bottom: 10px;
+width: 200px;
+height: auto;
+}
+.blog-post-part .date-title-share-tag-part {
+padding: 8px;
+}
+.related-article-block-bp {
+margin-left: 0px;
+}
+.blog-post-part .date-title-share-tag-part .title-tag-share-part h3{
+}
+.relarticle-description p:not(.readmore) {
+display: block;
+}
+.blog-post-part .relarticle-description {
+padding: 10px;
+padding-bottom: 10px;
+text-align: justify;
+}
+.wp-pagenavi {
+clear: both;
+text-align: center;
+margin-bottom: 20px;
+}
+input#ss[type="text"] {
+width: 183px;
+}
+.blog-post-part .date-title-share-tag-part .title-tag-share-part h3 {
+font-size: 14px;
+}
+button#searchs {
+background: #385f80;
+background: -moz-linear-gradient(top, #385f80 0%, #163253 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#385f80), color-stop(100%,#163253));
+background: -webkit-linear-gradient(top, #385f80 0%,#163253 100%);
+background: -o-linear-gradient(top, #385f80 0%,#163253 100%);
+background: -ms-linear-gradient(top, #385f80 0%,#163253 100%);
+background: linear-gradient(to bottom, #385f80 0%,#163253 100%);
+width: 80px;
+margin-left: -5px;
+height: 31px;
+border: none;
+border-top-right-radius: 4px;
+color: white;
+font-size: 14px;
+font-weight: bold;
+border-bottom-right-radius: 4px;
+cursor: pointer;
+}
+.wrapper-promo {
+width: 320px;
+margin: 0 auto;
+}
+.promo-area-part .top-promo-text-part p.top-text span {
+display:none;
+}
+.promo-area-part .top-promo-text-part {
+width: 239px;
+line-height: 23px;
+margin-left: 96px;
+}
+.promo-area-part .top-promo-text-part p.top-text {
+
+font-size: 19px;
+font-family: 'GraduateRegular';
+}
+.promo-area-part .main-logo {
+position: absolute;
+margin-left: 4px;
+}
+.promo-area-part .right-background-image {
+margin-top: -4px;
+}
+
+.promo-area-part .recommended-part {
+padding-top: 18px;
+width: 320px;
+float: left;
+
+}
+.promo-area-part {
+background: url(../images/promo_bg_mob.png) repeat-x;
+width: 320px;
+margin: 0 auto;
+height: 456px;
+}
+.promo-area-part .recommended-part p.recommedned-text {
+color: white;
+text-transform: uppercase;
+font-size: 19px;
+padding-left: 5px;
+font-family: 'GraduateRegular';
+}
+.promo-area-part .recommended-part p.recommedned-desc {
+color: #a2a2a2;
+font-size: 12px;
+font-family: 'Arial';
+padding-top: 3px;
+padding-left: 7px;
+}
+.promo-area-part .top-recommedned-sites-part {
+width: 320px;
+height: 100px;
+margin-top: 288px;
+}
+.promo-area-part .top-recommedned-sites-part .row .logo {
+width: 166px;
+height: auto;
+float: left;
+margin-top: 0px !important;
+margin-left: 5px !important;
+}
+.promo-area-part .top-recommedned-sites-part .row .logo .only-mobile .mobile {
+
+}
+.promo-area-part .top-recommedned-sites-part .row .logo img {
+margin-left: 0px;
+width: 136px;
+height: 40px;
+}
+.promo-area-part .right-background-image img {
+width: 279px;
+height: 212px;
+margin-left: 18px;
+}
+
+.main-banner-wrapper-bonuses .logo-container img {
+margin-left: 125px;
+width: 173px;
+height: 47px;
+}
+.main-banner-wrapper-bonuses .background-image-container {
+width: 274px;
+height: 150px;
+float: left;
+margin-top: 4px;
+margin-left: 19px;
+}
+.main-banner-wrapper-bonuses {
+background:white;
+height: 370px;
+}
+.main-banner-wrapper-bonuses .description {
+width: 284px;
+}
+.main-banner-wrapper-bonuses .description {
+margin-left: 10px;
+}
+.main-banner-wrapper-bonuses .description p.bet-now {
+margin-left: 43px;
+}
+.main-banner-wrapper-bonuses .description p {
+line-height: 18px;
+}
+/*Bonuses Part*/
+.main-banner-wrapper-bonuses ul li.bonus-part {
+list-style: none;
+width: 280px;
+height: auto;
+margin-right: 9px;
+display: inline-block;
+background: white;
+ margin-bottom: 0px;
+margin-left: 10px;
+margin-top: 10px;
+}
+.main-banner-wrapper-bonuses ul li.bonus-part .bonus-logo-area {
+width: 280px;
+height: 45px;
+}
+.main-banner-wrapper-bonuses ul li.bonus-part .bonus-logo-area img.logo-modification {
+width: 280px;
+height: 45px;
+}
+.main-banner-wrapper-bonuses ul li.bonus-part .bonus-text-area {
+width: 255px;
+height: auto;
+padding: 10px;
+}
+.main-banner-wrapper-bonuses ul li.bonus-part .bonus-text-area p.bonus-description {
+text-align: justify;
+color: #666666;
+font-size: 12px;
+height: 89px;
+overflow-y: hidden;
+margin-bottom: 10px;
+}
+.bonus-claim-now-area a.claim-now {
+height: 31px;
+width: 157px;
+margin-left: 52px;
+}
+.main-banner-wrapper-bonuses ul li.bonus-part .bonus-text-area p.bonus-title {
+height: 30px;
+}
+.responsive{
+width: 242px !important;
+height: 100px !important;
+}
+.article-sbo-info h1 {
+font-size: 20px;
+}
+.footer-nav-info ul {
+float: left;
+width: auto;
+margin-left: 0px;
+text-align: center;
+}
+.footer-info {
+height: 141px;
+background: #153051;
+padding: 28px 44px 0;
+}
+}

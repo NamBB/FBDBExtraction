@@ -17,3 +17,19 @@ class TransactionFBDB (object):
         with dbtool.cursor(self._db) as cur:
             cur.execute('select league_id from LEAGUE where name = ?', (league_name,))
             return cur.fetchone()
+
+    def archiveTeam (self, team_name):
+        with dbtool.cursor(self._db) as cur:
+            cur.execute('select team_id from TEAM where name = ?', (team_name,))
+            team = cur.fetchone()
+            if team == None:
+                cur.execute('insert into TEAM (name) values (?)', (team_name,))
+                self._db.commit()
+                return cur.lastrowid
+            else:
+                return team[0]
+
+    def updateTeamForce (self, team_name, force_value):
+        with dbtool.cursor(self._db) as cur:
+            cur.execute('update TEAM set force=? where name = ?', (force_value, team_name,))
+            self._db.commit()
