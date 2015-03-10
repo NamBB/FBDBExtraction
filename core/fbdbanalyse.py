@@ -13,17 +13,100 @@ class PredictionFBDB(object):
     def calculate(self):
         pass
 
-    def getTotalGoalsHome(self):
-        query = 'select sum(home_score), count(*) from MATCH, TEAM where MATCH.home_id = TEAM.team_id and TEAM.name like ?'
-        return dbtool.executeQueryFirst(self._db, query, ['%Chelsea%'])
+    def getTotalGoalsScoreHome(self, team):
+        query = 'select sum(home_score), count(*) from MATCH, TEAM \
+                where MATCH.home_id = TEAM.team_id and TEAM.name like ?'
+        return dbtool.executeQueryFirst(self._db, query, ['%'+team+'%'])
 
-    def getTotalGoalsAway(self):
-        query = 'select sum(away_score), count(*) from MATCH, TEAM where MATCH.away_id = TEAM.team_id and TEAM.name like ?'
-        return dbtool.executeQueryFirst(self._db, query, ['%Chelsea%'])
+    def getTotalGoalsScoreAway(self, team):
+        query = 'select sum(away_score), count(*) from MATCH, TEAM \
+                where MATCH.away_id = TEAM.team_id and TEAM.name like ?'
+        return dbtool.executeQueryFirst(self._db, query, ['%'+team+'%'])
+
+    def getTotalGoalsConcededHome(self, team):
+        query = 'select sum(away_score), count(*) from MATCH, TEAM \
+                where MATCH.home_id = TEAM.team_id and TEAM.name like ?'
+        return dbtool.executeQueryFirst(self._db, query, ['%'+team+'%'])
+
+    def getTotalGoalsConcededAway(self, team):
+        query = 'select sum(home_score), count(*) from MATCH, TEAM \
+                where MATCH.away_id = TEAM.team_id and TEAM.name like ?'
+        return dbtool.executeQueryFirst(self._db, query, ['%'+team+'%'])
+
+    def getAllTeam(self, league_name):
+        query = 'select TEAM.name from TEAM, LEAGUE \
+                where TEAM.league_id = LEAGUE.league_id and LEAGUE.name like ?'
+        return dbtool.executeQueryAll(self._db, query, ['%'+league_name+'%'])
 
     def getTotalGoalsAll(self):
-        total = self.getTotalGoalsHome()[0] + self.getTotalGoalsAway()[0]
-        print total
+        pass
+
+
+    def calculateAvgScoredConceded(self):
+        all_team = self.getAllTeam('Premier League')
+        total_games_home = 0
+        total_score_home = 0
+        total_conceded_home = 0
+        total_avg_score_home = 0
+        total_avg_conceded_home = 0
+        list_score_home =[]
+        list_avg_score_home = []
+        list_conceded_home =[]
+        list_avg_conceded_home = []
+
+        total_games_away = 0
+        total_score_away = 0
+        total_conceded_away = 0
+        total_avg_score_away = 0
+        total_avg_conceded_home = 0
+        list_score_away =[]
+        list_conceded_away =[]
+        list_avg_score_away = []
+        list_avg_conceded_away = []
+
+        for current_team in all_team:
+            #HOME
+            current_team = current_team[0]
+            score_home = self.getTotalGoalsScoreHome(current_team)
+            games_home = score_home[1]
+            score_home = score_home[0]
+            conceded_home = self.getTotalGoalsConcededHome(current_team)[0]
+            avg_score_home = float(score_home)/games_home
+            avg_conceded_home = float(conceded_home)/games_home
+
+            total_games_home += games_home
+            list_score_home.append(score_home)
+            list_avg_score_home.append(avg_score_home)
+            list_conceded_home.append(conceded_home)
+            list_avg_conceded_home.append(avg_conceded_home)
+
+            #AWAY
+            score_away = self.getTotalGoalsScoreAway(current_team)
+            games_away = score_away[1]
+            score_away = score_away[0]
+            conceded_away = self.getTotalGoalsConcededAway(current_team)[0]
+            avg_score_away = float(score_away)/games_away
+            avg_conceded_away = float(conceded_away)/games_away
+
+            total_games_away += games_away
+            list_score_away.append(score_away)
+            list_conceded_away.append(conceded_away)
+            list_avg_score_away.append(avg_score_away)
+            list_avg_conceded_away.append(avg_conceded_away)
+
+            print current_team, '\t', games_home, '\t',score_home, '\t',avg_score_home, '\t',conceded_home, '\t',avg_conceded_home
+
+        total_score_home = sum(list_score_home)
+        total_avg_score_home = float(total_score_home) / total_games_home
+        total_conceded_home = sum(list_conceded_home)
+        total_avg_conceded_home = float(total_conceded_home) / total_games_home
+
+        total_score_away = sum(list_score_away)
+        total_avg_score_away = float(total_score_away) / total_games_away
+        total_conceded_away = sum(list_conceded_away)
+        total_avg_conceded_away = float(total_conceded_away) / total_games_away
+
+        print 'Total', '\t', total_games_home, '\t', total_score_home, '\t', total_avg_score_home, '\t', total_conceded_home, '\t', total_avg_conceded_home
 
 
 
@@ -149,7 +232,7 @@ class QueryFBDB (object):
 
 def TestCalculate():
     x = PredictionFBDB(fbdbconfig.FBDBConfig('fbdb.conf'))
-    x.getTotalGoalsAll()
+    x.calculateAvgScoredConceded()
 
 if __name__ == '__main__':
     TestCalculate()

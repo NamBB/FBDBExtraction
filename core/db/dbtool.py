@@ -39,6 +39,10 @@ def executeQueryFirst(db, sentence, listParam):
         query_result = cur.fetchone()
         return query_result
 
+def executeQueryAll(db, sentence, listParam):
+    with cursor(db) as cur:
+        cur.execute(sentence, listParam)
+        return cur.fetchall()
 
 def searchTeam (db, team_name):
     with cursor(db) as cur:
@@ -53,12 +57,12 @@ def searchLeague (db, league_name):
 
 
 
-def archiveTeam (db, team_name):
+def archiveTeam (db, team_name, league_id):
     with cursor(db) as cur:
         cur.execute('select team_id from TEAM where name = ?', (team_name,))
         team = cur.fetchone()
         if team == None:
-            cur.execute('insert into TEAM (name) values (?)', (team_name,))
+            cur.execute('insert into TEAM (name, league_id) values (?, ?)', (team_name,league_id,))
             db.commit()
             return cur.lastrowid
         else:
@@ -114,8 +118,8 @@ def archiveGoal (db, match, goal):
 
 
 def archiveMatch (db, match):
-    match.home_id = archiveTeam(db, match.home)
-    match.away_id = archiveTeam(db, match.away)
+    match.home_id = archiveTeam(db, match.home, match.league_id)
+    match.away_id = archiveTeam(db, match.away, match.league_id)
 
     with cursor(db) as cur:
         cur.execute('insert into MATCH (home_id, away_id, home_score, away_score, home_score_1st, away_score_1st, match_date, league_id, season_id, round_id) '\
