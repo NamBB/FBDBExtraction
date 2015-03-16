@@ -2,16 +2,42 @@ import inspect
 import os
 from core.db import dbtool
 import fbdbconfig
+import mytool
 
 __author__ = 'holynoob'
+
+class SeasonPerformanceData(object):
+    def __init__(self):
+        self.total_games = 0
+        self.total_score = 0
+        self.total_conceded = 0
+        self.total_avg_score = 0
+        self.total_avg_conceded = 0
+        self.list_score =[]
+        self.list_avg_score = []
+        self.list_conceded =[]
+        self.list_avg_conceded = []
+
+
+    def calculate(self):
+        self.total_score = sum(self.list_score)
+        self.total_avg_score = float(self.total_score) / self.total_games
+        self.total_conceded = sum(self.list_conceded)
+        self.total_avg_conceded = float(self.total_conceded) / self.total_games
+
+    def toString(self):
+        return str(self.total_games) + '\t' + str(self.total_score) + '\t' + str(self.total_avg_score) \
+               + '\t' + str(self.total_conceded) + '\t' + str(self.total_avg_conceded)
+
+
 
 class PredictionFBDB(object):
     def __init__(self, fbdb_config):
         self._fbdb_config = fbdb_config
         self._db = dbtool.connectDatabase(self._fbdb_config.db_path)
-
-    def calculate(self):
-        pass
+        self.home_perf = SeasonPerformanceData()
+        self.away_perf = SeasonPerformanceData()
+        self.dict_team = {}
 
     def getTotalGoalsScoreHome(self, team):
         query = 'select sum(home_score), count(*) from MATCH, TEAM \
@@ -44,29 +70,12 @@ class PredictionFBDB(object):
 
     def calculateAvgScoredConceded(self):
         all_team = self.getAllTeam('Premier League')
-        total_games_home = 0
-        total_score_home = 0
-        total_conceded_home = 0
-        total_avg_score_home = 0
-        total_avg_conceded_home = 0
-        list_score_home =[]
-        list_avg_score_home = []
-        list_conceded_home =[]
-        list_avg_conceded_home = []
 
-        total_games_away = 0
-        total_score_away = 0
-        total_conceded_away = 0
-        total_avg_score_away = 0
-        total_avg_conceded_home = 0
-        list_score_away =[]
-        list_conceded_away =[]
-        list_avg_score_away = []
-        list_avg_conceded_away = []
-
-        for current_team in all_team:
+        for i in range(0, len(all_team)):
             #HOME
-            current_team = current_team[0]
+            current_team = all_team[i][0]
+            self.dict_team[current_team] = i
+
             score_home = self.getTotalGoalsScoreHome(current_team)
             games_home = score_home[1]
             score_home = score_home[0]
@@ -74,11 +83,11 @@ class PredictionFBDB(object):
             avg_score_home = float(score_home)/games_home
             avg_conceded_home = float(conceded_home)/games_home
 
-            total_games_home += games_home
-            list_score_home.append(score_home)
-            list_avg_score_home.append(avg_score_home)
-            list_conceded_home.append(conceded_home)
-            list_avg_conceded_home.append(avg_conceded_home)
+            self.home_perf.total_games += games_home
+            self.home_perf.list_score.append(score_home)
+            self.home_perf.list_avg_score.append(avg_score_home)
+            self.home_perf.list_conceded.append(conceded_home)
+            self.home_perf.list_avg_conceded.append(avg_conceded_home)
 
             #AWAY
             score_away = self.getTotalGoalsScoreAway(current_team)
@@ -88,26 +97,42 @@ class PredictionFBDB(object):
             avg_score_away = float(score_away)/games_away
             avg_conceded_away = float(conceded_away)/games_away
 
-            total_games_away += games_away
-            list_score_away.append(score_away)
-            list_conceded_away.append(conceded_away)
-            list_avg_score_away.append(avg_score_away)
-            list_avg_conceded_away.append(avg_conceded_away)
+            self.away_perf.total_games += games_away
+            self.away_perf.list_score.append(score_away)
+            self.away_perf.list_conceded.append(conceded_away)
+            self.away_perf.list_avg_score.append(avg_score_away)
+            self.away_perf.list_avg_conceded.append(avg_conceded_away)
 
             print current_team, '\t', games_home, '\t',score_home, '\t',avg_score_home, '\t',conceded_home, '\t',avg_conceded_home
+            print current_team, '\t', games_away, '\t',score_away, '\t',avg_score_away, '\t',conceded_away, '\t',avg_conceded_away
 
-        total_score_home = sum(list_score_home)
-        total_avg_score_home = float(total_score_home) / total_games_home
-        total_conceded_home = sum(list_conceded_home)
-        total_avg_conceded_home = float(total_conceded_home) / total_games_home
+        self.home_perf.calculate()
+        self.away_perf.calculate()
 
-        total_score_away = sum(list_score_away)
-        total_avg_score_away = float(total_score_away) / total_games_away
-        total_conceded_away = sum(list_conceded_away)
-        total_avg_conceded_away = float(total_conceded_away) / total_games_away
+        print 'Total Home', '\t', self.home_perf.toString()
+        print 'Total Away', '\t', self.away_perf.toString()
 
-        print 'Total', '\t', total_games_home, '\t', total_score_home, '\t', total_avg_score_home, '\t', total_conceded_home, '\t', total_avg_conceded_home
 
+    def predictNextGames(self):
+        home_team = 'Chelsea FC'
+        away_team = 'Burnley FC'
+
+        self.calculateAvgScoredConceded()
+        home_att_str = self.home_perf.list_avg_score[self.dict_team[home_team]] / self.home_perf.total_avg_score
+        home_def_str = self.home_perf.list_avg_conceded[self.dict_team[home_team]] / self.home_perf.total_avg_conceded
+
+        away_att_str = self.away_perf.list_avg_score[self.dict_team[away_team]] / self.away_perf.total_avg_score
+        away_def_str = self.away_perf.list_avg_conceded[self.dict_team[away_team]] / self.away_perf.total_avg_conceded
+
+        home_goal_exp = home_att_str * away_def_str * self.home_perf.total_avg_score
+        away_goal_exp = away_att_str * home_def_str * self.away_perf.total_avg_score
+
+        print home_att_str, home_def_str
+        print away_att_str, away_def_str
+        print home_goal_exp, away_goal_exp
+
+        print "My Poisson", mytool.poisson_probability(2, home_goal_exp)
+        #print "SciPy Poisson", poisson._pmf(2, home_goal_exp)
 
 
 
@@ -232,7 +257,7 @@ class QueryFBDB (object):
 
 def TestCalculate():
     x = PredictionFBDB(fbdbconfig.FBDBConfig('fbdb.conf'))
-    x.calculateAvgScoredConceded()
+    x.predictNextGames()
 
 if __name__ == '__main__':
     TestCalculate()
